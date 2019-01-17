@@ -10,11 +10,9 @@ public class RandomMovement : MonoBehaviour {
 	Transform destination;
 	public float speed=0.8f;
     //public float Xpos, Ypos;
-    IEnumerator co;
     Vector3 RandPosition;
     int randnum;
-    Color colour;
-    SpriteRenderer other;
+   
 	void Start () {
 		Spawnobj();
 	}
@@ -70,34 +68,5 @@ public class RandomMovement : MonoBehaviour {
                 panel.gameObject.SetActive(true);
             }
         }
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.transform.tag == "enemy")
-        {
-            other = collision.gameObject.GetComponent<SpriteRenderer>();
-            if (!other.color.Equals(GetComponent<SpriteRenderer>().color))
-            {
-                InvokeRepeating("trigger",0.1f,0.3f);
-                
-            }
-               
-        }
-    }
-   void  trigger()
-    {
-        StartCoroutine(flash());
-    }
-    IEnumerator flash()
-    {
-        Color colour = other.color;
-        other.color = Color.white;
-        yield return new WaitForSeconds(0.3f);
-        other.color = colour;
-    }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        CancelInvoke("trigger");
-        other.color = colour;
     }
 }
