@@ -4,8 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class RandomMovement : MonoBehaviour {
+    
 
-	public Transform prefab;
+    public Transform prefab;
     public RectTransform panel;
 	Transform destination;
 	public float speed=0.8f;
@@ -55,12 +56,13 @@ public class RandomMovement : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.transform.tag == "enemy")
+        if (collision.transform.tag == "EnemyA")
         {
             SpriteRenderer renderer = collision.gameObject.GetComponent<SpriteRenderer>();
             if (renderer.color.Equals(GetComponent<SpriteRenderer>().color))
             {
                 Destroy(gameObject);
+                ColoursScript.no_of_objs--;
                 Destroy(collision.gameObject);
             }
             else

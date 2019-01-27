@@ -10,7 +10,7 @@ public class dangerobj : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.transform.tag == "enemy")
+        if (collision.transform.tag == "EnemyA")
         {
             Destroy(collision.gameObject);
             if(Show_GameOver_screen)
