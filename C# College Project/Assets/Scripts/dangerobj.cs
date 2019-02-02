@@ -13,8 +13,11 @@ public class dangerobj : MonoBehaviour {
         if (collision.transform.tag == "EnemyA")
         {
             Destroy(collision.gameObject);
-            if(Show_GameOver_screen)
+            if (Show_GameOver_screen)
+            {
                 panel.gameObject.SetActive(true);
+                AudioManager.playaudiogameover = true;
+            }
         }
     }
 }

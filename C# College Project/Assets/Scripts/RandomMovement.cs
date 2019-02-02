@@ -13,9 +13,10 @@ public class RandomMovement : MonoBehaviour {
     //public float Xpos, Ypos;
     Vector3 RandPosition;
     int randnum;
-   
+
 	void Start () {
 		Spawnobj();
+        
 	}
 	
 	
@@ -61,13 +62,16 @@ public class RandomMovement : MonoBehaviour {
             SpriteRenderer renderer = collision.gameObject.GetComponent<SpriteRenderer>();
             if (renderer.color.Equals(GetComponent<SpriteRenderer>().color))
             {
-                Destroy(gameObject);
-                ColoursScript.no_of_objs--;
-                Destroy(collision.gameObject);
+                    Destroy(gameObject);
+                    ColoursScript.no_of_objs--;
+                    Destroy(collision.gameObject);
+                    AudioManager.playaudiogood = true;
             }
             else
             {
                 panel.gameObject.SetActive(true);
+                AudioManager.playaudiogameover = true;
+                speed = 0f;
             }
         }
     }

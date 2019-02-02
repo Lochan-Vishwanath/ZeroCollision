@@ -258,7 +258,7 @@ PrefabInstance:
     - target: {fileID: 114431389259281670, guid: 78feac9053ddfea438b19bfab2d780bb,
         type: 3}
       propertyPath: Set_Option
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114431389259281670, guid: 78feac9053ddfea438b19bfab2d780bb,
         type: 3}
@@ -434,7 +434,7 @@ PrefabInstance:
     - target: {fileID: 114431389259281670, guid: 78feac9053ddfea438b19bfab2d780bb,
         type: 3}
       propertyPath: Set_Option
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114431389259281670, guid: 78feac9053ddfea438b19bfab2d780bb,
         type: 3}

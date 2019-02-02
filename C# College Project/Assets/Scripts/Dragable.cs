@@ -20,11 +20,14 @@ public class Dragable : MonoBehaviour {
 				if(mycoll==Physics2D.OverlapCircle(touchPosworld2D,0.01f)){
 					objtouched=true;
 				}
-		
-		if(objtouched){
-			transform.position=touchPosworld2D;
-			if(t.phase==TouchPhase.Ended){
-				objtouched=false;
+            if (objtouched)
+            {
+                StartCoroutine(pop());
+            }
+		    if(objtouched){
+			    transform.position=touchPosworld2D;
+			    if(t.phase==TouchPhase.Ended){
+				    objtouched=false;
 			}
 		}
 
@@ -45,4 +48,20 @@ public class Dragable : MonoBehaviour {
 			
 		}
 	}
+    IEnumerator pop()
+    {
+        GameObject[] objs = GameObject.FindGameObjectsWithTag("EnemyA");
+
+        foreach (GameObject obj in objs)
+        {
+            if (obj != gameObject && obj.GetComponent<randomColor>().Set_Option == GetComponent<randomColor>().Set_Option)
+            {
+                Vector3 originalscale = obj.transform.localScale;
+                /* if clicked countinously the size of the object grows*/
+                obj.transform.localScale *= 1.1f;
+                yield return new WaitForSeconds(0.3f);
+                obj.transform.localScale = originalscale;
+            }
+        }
+    }
 }

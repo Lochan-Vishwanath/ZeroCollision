@@ -8,6 +8,10 @@ public class ColoursScript : MonoBehaviour {
     SpriteRenderer Myrender;
     public RectTransform nextPanel;
     public static int no_of_objs = 0;
+    [HideInInspector]
+    public GameObject[] objs;
+
+    bool once = true;
 
     public Color32 setColor(int Set_Option)
     {
@@ -24,7 +28,9 @@ public class ColoursScript : MonoBehaviour {
 
     private void Start()
     {
-        GameObject[] objs = GameObject.FindGameObjectsWithTag("EnemyA");
+        once = true;
+        no_of_objs = 0;
+        objs = GameObject.FindGameObjectsWithTag("EnemyA");
 
         foreach (GameObject obj in objs)
         {
@@ -37,6 +43,12 @@ public class ColoursScript : MonoBehaviour {
         if (no_of_objs <= 0)
         {
             nextPanel.gameObject.SetActive(true);
+            if (once)
+            {
+                GetComponent<AudioSource>().Play();
+                once = false;
+            }
+            
         }
     }
 }
