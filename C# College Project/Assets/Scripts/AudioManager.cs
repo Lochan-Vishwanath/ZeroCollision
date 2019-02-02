@@ -22,7 +22,7 @@ public class AudioManager : MonoBehaviour
             //mainau.Play();
             mainau.PlayOneShot(good);
             playaudiogood = false;
-            Debug.Log("inside audiomanager");
+            //Debug.Log("inside audiomanager");
         }
         if (playaudiogameover)
         {

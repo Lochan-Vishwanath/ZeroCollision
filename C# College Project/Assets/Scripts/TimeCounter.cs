@@ -11,7 +11,9 @@ public class TimeCounter : MonoBehaviour {
     float progress;
     float time;
     public float MaxTime;
+    public RectTransform panel;
 	void Start () {
+        dead = false;
         txt = this.GetComponent<Text>();
         time = Time.time;
         StartCoroutine(timeToProgressBar());
@@ -19,13 +21,26 @@ public class TimeCounter : MonoBehaviour {
 	
 	void Update () {
         txt.text = (MaxTime - (Time.time - time)).ToString("f2");
-        if((Time.time - time) == 0)
-        {
-            dead = true;
-        }
+       // if((Time.time - time) == 0)
+       // {
+        //    dead = true;
+       // }
         progress = (MaxTime - (Time.time - time)) / MaxTime;
         //Debug.Log((MaxTime-(Time.time - time))/MaxTime);
         timerslider.value = progress;
+    }
+    private void LateUpdate()
+    {
+        if (progress<=0)
+        {
+            GameObject[] objs = GameObject.FindGameObjectsWithTag("EnemyA");
+
+            foreach (GameObject obj in objs)
+            {
+                obj.GetComponent<RandomMovement>().speed = 0f;
+            }
+            panel.gameObject.SetActive(true);
+        }
     }
     IEnumerator timeToProgressBar()
     {

@@ -832,6 +832,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerslider: {fileID: 114093502818600828}
   MaxTime: 15
+  panel: {fileID: 224044102290254704}
 --- !u!1 &1418200568376334
 GameObject:
   m_ObjectHideFlags: 0

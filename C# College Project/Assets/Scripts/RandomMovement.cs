@@ -57,6 +57,12 @@ public class RandomMovement : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.transform.tag == "GOD") {
+            Destroy(gameObject);
+            ColoursScript.no_of_objs--;
+            AudioManager.playaudiogood = true;
+        }
+
         if (collision.transform.tag == "EnemyA")
         {
             SpriteRenderer renderer = collision.gameObject.GetComponent<SpriteRenderer>();
