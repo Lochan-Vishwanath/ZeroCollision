@@ -111,8 +111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 4704668943749448, guid: bca5f16fb7b5b1b4488de0b570cab22b, type: 3}
-  panel: {fileID: 0}
-  speed: 0.4
+  speed: 0.6
 --- !u!58 &58527988826661290
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -141,8 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a697d4497550ce49891a5c72915c68b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Set_Option: 3
-  cs: {fileID: 0}
+  Set_Option: 1
 --- !u!114 &114433215263769172
 MonoBehaviour:
   m_ObjectHideFlags: 0

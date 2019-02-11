@@ -7,8 +7,10 @@ public class randomColor : MonoBehaviour {
     SpriteRenderer myrender;
     [Range(0, 5)]
     public int Set_Option = 0;
-   public ColoursScript cs;
+   //public 
+   ColoursScript cs;
     void Start(){
+        cs= GameObject.Find("Main/Main Camera/").GetComponent<ColoursScript>();
         myrender = GetComponent<SpriteRenderer>();
         Color32 newcolor =cs.setColor(Set_Option);
         myrender.color = newcolor;

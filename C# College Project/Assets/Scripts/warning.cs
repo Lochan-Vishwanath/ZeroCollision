@@ -18,7 +18,7 @@ public class warning : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.transform.tag == "EnemyB")
+        if(collision.transform.tag == "EnemyB" || collision.transform.tag == "Spike")
         {
             InvokeRepeating("trigger", 0.1f, 0.3f);
         }

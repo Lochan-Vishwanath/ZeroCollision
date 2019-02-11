@@ -5,18 +5,21 @@ using UnityEngine.UI;
 
 public class RandomMovement : MonoBehaviour {
     
-
     public Transform prefab;
-    public RectTransform panel;
+    //public 
+    RectTransform panel;
 	Transform destination;
 	public float speed=0.8f;
     //public float Xpos, Ypos;
     Vector3 RandPosition;
     int randnum;
 
+    GameObject[] objs;
+
 	void Start () {
+        panel = GameObject.Find("Main/Canvas/GAME OVER PANEL").GetComponent<RectTransform>();
 		Spawnobj();
-        
+        objs = GameObject.FindGameObjectsWithTag("EnemyA");
 	}
 	
 	
@@ -35,19 +38,19 @@ public class RandomMovement : MonoBehaviour {
         switch (randnum)
         {
             case 1:
-                RandPosition = Camera.main.ViewportToWorldPoint(new Vector3(0.1f, Random.Range(0.2f,0.8f), Camera.main.farClipPlane / 2));
+                RandPosition = Camera.main.ViewportToWorldPoint(new Vector3(0.1f, Random.Range(0.14f,0.82f), Camera.main.farClipPlane / 2));
                 //RandPosition = Camera.main.ScreenToWorldPoint(new Vector3(30, Random.Range(90, Screen.height - 90), Camera.main.farClipPlane / 2));
                 break;
             case 2:
-                RandPosition = Camera.main.ViewportToWorldPoint(new Vector3(0.9f, Random.Range(0.2f, 0.8f), Camera.main.farClipPlane / 2));
+                RandPosition = Camera.main.ViewportToWorldPoint(new Vector3(0.86f, Random.Range(0.14f, 0.82f), Camera.main.farClipPlane / 2));
                 //RandPosition = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width - 30, Random.Range(90, Screen.height - 90), Camera.main.farClipPlane / 2));
                 break;
             case 3:
-                RandPosition = Camera.main.ViewportToWorldPoint(new Vector3(Random.Range(0.1f, 0.9f), 0.2f , Camera.main.farClipPlane / 2));
+                RandPosition = Camera.main.ViewportToWorldPoint(new Vector3(Random.Range(0.1f, 0.86f), 0.14f , Camera.main.farClipPlane / 2));
                 //RandPosition = Camera.main.ScreenToWorldPoint(new Vector3(Random.Range(30, Screen.width - 30), Screen.height - 90, Camera.main.farClipPlane / 2));
                 break;
             case 4:
-                RandPosition = Camera.main.ViewportToWorldPoint(new Vector3(Random.Range(0.1f, 0.9f), 0.8f, Camera.main.farClipPlane / 2));
+                RandPosition = Camera.main.ViewportToWorldPoint(new Vector3(Random.Range(0.1f, 0.86f), 0.82f, Camera.main.farClipPlane / 2));
                 //RandPosition = Camera.main.ScreenToWorldPoint(new Vector3(Random.Range(30, Screen.width - 30), 90, Camera.main.farClipPlane / 2));
                 break;
         }
@@ -75,6 +78,11 @@ public class RandomMovement : MonoBehaviour {
             }
             else
             {
+                foreach (GameObject obj in objs)
+                {
+                    if(obj==null) continue;
+                    obj.GetComponent<RandomMovement>().speed=0;
+                }
                 panel.gameObject.SetActive(true);
                 AudioManager.playaudiogameover = true;
                 speed = 0f;
@@ -82,3 +90,10 @@ public class RandomMovement : MonoBehaviour {
         }
     }
 }
+/* if(nextPanel.gameObject.activeInHierarchy){
+            foreach (GameObject obj in objs)
+            {
+                obj.GetComponent<RandomMovement>().speed=0;
+            }
+        }
+        */
