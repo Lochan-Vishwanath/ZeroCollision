@@ -14,8 +14,8 @@ public class SpikeMovement : MonoBehaviour
     {
         panel = GameObject.Find("Main/Canvas/GAME OVER PANEL").GetComponent<RectTransform>();
         objs = GameObject.FindGameObjectsWithTag("EnemyA");
-        destination1.GetComponent<SpriteRenderer>().color=new Color(destination1.GetComponent<SpriteRenderer>().color.r,destination1.GetComponent<SpriteRenderer>().color.g,destination1.GetComponent<SpriteRenderer>().color.b,0f);
-        destination2.GetComponent<SpriteRenderer>().color=new Color(destination2.GetComponent<SpriteRenderer>().color.r,destination2.GetComponent<SpriteRenderer>().color.g,destination2.GetComponent<SpriteRenderer>().color.b,0f);
+       // destination1.GetComponent<SpriteRenderer>().color=new Color(destination1.GetComponent<SpriteRenderer>().color.r,destination1.GetComponent<SpriteRenderer>().color.g,destination1.GetComponent<SpriteRenderer>().color.b,0f);
+       // destination2.GetComponent<SpriteRenderer>().color=new Color(destination2.GetComponent<SpriteRenderer>().color.r,destination2.GetComponent<SpriteRenderer>().color.g,destination2.GetComponent<SpriteRenderer>().color.b,0f);
         destination = destination1;
     }
     void Update()
@@ -24,6 +24,7 @@ public class SpikeMovement : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, destination.position, speed);
         if (Vector2.Distance(transform.position, destination.position) == 0)
         {
+            Debug.Log("here");
             if (destination.Equals(destination1))
                 destination = destination2;
             else
