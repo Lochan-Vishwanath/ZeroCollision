@@ -7,12 +7,12 @@ public class loadlevel : MonoBehaviour {
 
 	public void loadlvl(string lvlName)
     {
-
+        StageLoad.stageloading=false;
         SceneManager.LoadScene(lvlName,LoadSceneMode.Single);
     }
     public void loadmain()
     {
-        
+        StageLoad.stageloading=false;
         SceneManager.LoadScene("Main",LoadSceneMode.Single);
     }
 }

@@ -12,7 +12,10 @@ public class ColoursScript : MonoBehaviour {
     public GameObject[] objs;
 
     bool once = true;
+    public bool shownextlvl=false;
+    loadlevel x;
 
+    public string nxtstage;
     public Color32 setColor(int Set_Option)
     {
         switch (Set_Option)
@@ -28,6 +31,7 @@ public class ColoursScript : MonoBehaviour {
 
     private void Start()
     {
+        x=GetComponent<loadlevel>();
         once = true;
         no_of_objs = 0;
         objs = GameObject.FindGameObjectsWithTag("EnemyA");
@@ -39,10 +43,15 @@ public class ColoursScript : MonoBehaviour {
         Debug.Log(no_of_objs);
     }
     private void LateUpdate()
-    {
+    {   
+        
         if (no_of_objs <= 0)
         {
-            nextPanel.gameObject.SetActive(true);
+            if(shownextlvl)
+                nextPanel.gameObject.SetActive(true);
+            else
+                x.loadlvl(nxtstage);
+
             if (once)
             {
                 GetComponent<AudioSource>().Play();

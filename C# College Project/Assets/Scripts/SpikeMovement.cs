@@ -20,6 +20,7 @@ public class SpikeMovement : MonoBehaviour
     }
     void Update()
     {
+        if(StageLoad.stageloading)
         //Debug.Log(Time.deltaTime*speed);
         transform.position = Vector3.MoveTowards(transform.position, destination.position, speed);
         if (Vector2.Distance(transform.position, destination.position) == 0)

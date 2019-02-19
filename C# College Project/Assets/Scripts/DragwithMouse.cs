@@ -14,6 +14,7 @@ public class DragwithMouse : MonoBehaviour {
     }
     private void OnMouseDrag()
     {
+        if(StageLoad.stageloading)
         if (!clicked)
         {
             StartCoroutine(pop());

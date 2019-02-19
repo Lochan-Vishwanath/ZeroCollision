@@ -455,6 +455,7 @@ GameObject:
   - component: {fileID: 4641479379229148}
   - component: {fileID: 7861447854040904674}
   - component: {fileID: 920143206}
+  - component: {fileID: 1108532797773379701}
   m_Layer: 0
   m_Name: Main
   m_TagString: Untagged
@@ -591,6 +592,19 @@ MonoBehaviour:
   good: {fileID: 8300000, guid: 20f58c889e59bd4488647d14b9b1fb08, type: 3}
   gameover: {fileID: 8300000, guid: 1b1261cb20367df409fc49a494a7a66d, type: 3}
   next: {fileID: 8300000, guid: 13aa1a42fbcb11740a49d2fae967c4a0, type: 3}
+--- !u!114 &1108532797773379701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117797343235124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82f33416180133b4496ea095fe0802c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loadstage: 1
 --- !u!1 &1178617369213714
 GameObject:
   m_ObjectHideFlags: 0
@@ -1767,6 +1781,7 @@ GameObject:
   - component: {fileID: 81796877980719560}
   - component: {fileID: 114996525408164984}
   - component: {fileID: 965458553}
+  - component: {fileID: 5540241633424695036}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1867,6 +1882,8 @@ MonoBehaviour:
     rgba: 4285782804
   nextPanel: {fileID: 6046447854180596401}
   objs: []
+  shownextlvl: 0
+  nxtstage: 
 --- !u!82 &965458553
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1963,6 +1980,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5540241633424695036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956440371941178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b177d2c333ff944e99e76ae4ea474a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &687370179970141068
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,7 +12,7 @@ public class Dragable : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if(StageLoad.stageloading)
 		if(Input.touchCount>0){
 			Touch t=Input.GetTouch(0);
 			Vector2 touchPosworld2D = Camera.main.ScreenToWorldPoint(t.position);
