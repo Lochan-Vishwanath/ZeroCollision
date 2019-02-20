@@ -628,6 +628,11 @@ PrefabInstance:
       propertyPath: loadstage
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3597659107791237173, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: l2-1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd, type: 3}
 --- !u!1001 &1742299425
