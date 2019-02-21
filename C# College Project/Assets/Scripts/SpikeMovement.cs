@@ -49,6 +49,8 @@ public class SpikeMovement : MonoBehaviour
             //}
             panel.gameObject.SetActive(true);
             AudioManager.playaudiogameover = true;
+            DragwithMouse.takemouseinput=false;
+            Dragable.taketouchinput=false;
         }
     }
 }

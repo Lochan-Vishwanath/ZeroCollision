@@ -6,13 +6,15 @@ public class Dragable : MonoBehaviour {
 
 	Collider2D mycoll;
 	bool objtouched=false;
+	public static bool taketouchinput=true;
 	void Start () {
 		mycoll=GetComponent<Collider2D>();
+		taketouchinput=true;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if(StageLoad.stageloading)
+		if(StageLoad.stageloading && taketouchinput)
 		if(Input.touchCount>0){
 			Touch t=Input.GetTouch(0);
 			Vector2 touchPosworld2D = Camera.main.ScreenToWorldPoint(t.position);

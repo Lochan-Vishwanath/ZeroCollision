@@ -4,6 +4,16 @@ using UnityEngine;
 
 public class DragwithMouse : MonoBehaviour {
     bool clicked = false;
+    RectTransform panel;
+    public static bool takemouseinput=true;
+    void Start(){
+        panel = GameObject.Find("Main/Canvas/GAME OVER PANEL").GetComponent<RectTransform>();
+        takemouseinput=true;
+    }
+//    void LateUpdate(){
+//        if(panel.gameObject.activeInHierarchy)
+//            takemouseinput=false;
+//    }
     private void OnMouseDown()
     {
         clicked = false;
@@ -14,13 +24,13 @@ public class DragwithMouse : MonoBehaviour {
     }
     private void OnMouseDrag()
     {
-        if(StageLoad.stageloading)
         if (!clicked)
         {
             StartCoroutine(pop());
             clicked = true;
         }
-        transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        if(StageLoad.stageloading && takemouseinput)
+            transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
     
     IEnumerator pop()

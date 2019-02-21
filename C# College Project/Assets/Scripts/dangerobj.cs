@@ -24,7 +24,7 @@ public class dangerobj : MonoBehaviour {
             //if(panel.gameObject.activeInHierarchy){
                 foreach (GameObject obj in objs)
                 {
-                    if(obj==null) continue;
+                    if(obj==null) continue;//if obj is destroyed 
                     obj.GetComponent<RandomMovement>().speed=0;
                 }
             //}
@@ -32,6 +32,8 @@ public class dangerobj : MonoBehaviour {
             {
                 panel.gameObject.SetActive(true);
                 AudioManager.playaudiogameover = true;
+                DragwithMouse.takemouseinput=false;
+                Dragable.taketouchinput=false;
             }
         }
     }
