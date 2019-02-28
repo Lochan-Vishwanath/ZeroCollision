@@ -32,7 +32,7 @@ public class warning : MonoBehaviour {
             }
             else
             {
-                Debug.Log("samecolor");
+            //    Debug.Log("samecolor");
             }
 
 

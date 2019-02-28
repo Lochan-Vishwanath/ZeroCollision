@@ -85,8 +85,9 @@ public class RandomMovement : MonoBehaviour {
                 }
                 panel.gameObject.SetActive(true);
                 AudioManager.playaudiogameover = true;
-                DragwithMouse.takemouseinput=false;
-                Dragable.taketouchinput=false;
+                StageLoad.stageloading = false;
+                //DragwithMouse.takemouseinput=false;
+                //Dragable.taketouchinput=false;
                 speed = 0f;
             }
         }

@@ -331,11 +331,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3597659107791237173, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: l4-1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd, type: 3}
 --- !u!1001 &1147624480
@@ -425,11 +420,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4730861526068408, guid: 78feac9053ddfea438b19bfab2d780bb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.14
+      value: -3.51
       objectReference: {fileID: 0}
     - target: {fileID: 4730861526068408, guid: 78feac9053ddfea438b19bfab2d780bb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.88
+      value: 5.09
       objectReference: {fileID: 0}
     - target: {fileID: 4730861526068408, guid: 78feac9053ddfea438b19bfab2d780bb, type: 3}
       propertyPath: m_LocalPosition.z

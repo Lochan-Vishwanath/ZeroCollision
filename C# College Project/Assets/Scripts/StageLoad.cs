@@ -11,6 +11,10 @@ public class StageLoad : MonoBehaviour
         if(loadstage){
             StartCoroutine(Pause(3));
         }
+        if (!loadstage)
+        {
+            stageloading = true;
+        }
     }
     private IEnumerator Pause(int p){
         Time.timeScale = 0.1f;

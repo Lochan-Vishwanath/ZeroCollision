@@ -40,7 +40,7 @@ public class ColoursScript : MonoBehaviour {
         {
             no_of_objs++;
         }
-        Debug.Log(no_of_objs);
+        //Debug.Log(no_of_objs);
     }
     private void LateUpdate()
     {   

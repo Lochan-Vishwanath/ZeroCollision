@@ -5,10 +5,10 @@ using UnityEngine;
 public class DragwithMouse : MonoBehaviour {
     bool clicked = false;
     RectTransform panel;
-    public static bool takemouseinput=true;
+    //public static bool takemouseinput=true;
     void Start(){
         panel = GameObject.Find("Main/Canvas/GAME OVER PANEL").GetComponent<RectTransform>();
-        takemouseinput=true;
+        //takemouseinput=true;
     }
 //    void LateUpdate(){
 //        if(panel.gameObject.activeInHierarchy)
@@ -29,7 +29,7 @@ public class DragwithMouse : MonoBehaviour {
             StartCoroutine(pop());
             clicked = true;
         }
-        if(StageLoad.stageloading && takemouseinput)
+        if(StageLoad.stageloading)// && takemouseinput)
             transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
     
