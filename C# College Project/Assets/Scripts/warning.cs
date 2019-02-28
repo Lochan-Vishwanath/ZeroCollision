@@ -20,7 +20,7 @@ public class warning : MonoBehaviour {
     {
         if(collision.transform.tag == "EnemyB" || collision.transform.tag == "Spike")
         {
-            InvokeRepeating("trigger", 0.1f, 0.3f);
+            InvokeRepeating("trigger", 0.1f, 0.5f);
         }
         if (collision.transform.tag == "EnemyA")
         {
@@ -28,7 +28,7 @@ public class warning : MonoBehaviour {
             if (!(no == colno))
             {
                 Debug.Log("not same color");
-                InvokeRepeating("trigger", 0.1f, 0.3f);
+                InvokeRepeating("trigger", 0.1f, 0.5f);
             }
             else
             {

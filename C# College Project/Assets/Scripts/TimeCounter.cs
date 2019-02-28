@@ -26,7 +26,7 @@ public class TimeCounter : MonoBehaviour {
         //    dead = true;
        // }
         progress = (MaxTime - (Time.time - time)) / MaxTime;
-        //Debug.Log((MaxTime-(Time.time - time))/MaxTime);
+        //Debug.Log(progress);
         timerslider.value = progress;
     }
     private void LateUpdate()
