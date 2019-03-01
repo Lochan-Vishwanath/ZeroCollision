@@ -30,8 +30,8 @@ public class Dragable : MonoBehaviour {
 			    transform.position=touchPosworld2D;
 			    if(t.phase==TouchPhase.Ended){
 				    objtouched=false;
-			}
-		}
+			    }
+		    }
 
 				/* if(t.phase==TouchPhase.Moved){
 					Debug.Log("Yo this boi moved");

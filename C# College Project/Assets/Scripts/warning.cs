@@ -27,7 +27,7 @@ public class warning : MonoBehaviour {
             int colno=collision.GetComponentInParent<randomColor>().Set_Option;
             if (!(no == colno))
             {
-                Debug.Log("not same color");
+                //Debug.Log("not same color");
                 InvokeRepeating("trigger", 0.1f, 0.5f);
             }
             else

@@ -25,7 +25,7 @@ public class SpikeMovement : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, destination.position, speed);
         if (Vector2.Distance(transform.position, destination.position) == 0)
         {
-            Debug.Log("here");
+            //Debug.Log("here");
             if (destination.Equals(destination1))
                 destination = destination2;
             else
