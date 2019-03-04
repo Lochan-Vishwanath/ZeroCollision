@@ -17,17 +17,23 @@ public class TimeCounter : MonoBehaviour {
         txt = this.GetComponent<Text>();
         time = Time.time;
         StartCoroutine(timeToProgressBar());
+        progress = MaxTime;
 	}
 	
 	void Update () {
-        txt.text = (MaxTime - (Time.time - time)).ToString("f2");
-       // if((Time.time - time) == 0)
-       // {
-        //    dead = true;
-       // }
-        progress = (MaxTime - (Time.time - time)) / MaxTime;
-        //Debug.Log(progress);
-        timerslider.value = progress;
+
+        if (StageLoad.stageloading)
+        {
+            txt.text = (MaxTime - (Time.time - time)).ToString("f2");
+            // if((Time.time - time) == 0)
+            // {
+            //    dead = true;
+            // }
+
+            progress = (MaxTime - (Time.time - time)) / MaxTime;
+            //Debug.Log(progress);
+            timerslider.value = progress;
+        }
     }
     private void LateUpdate()
     {

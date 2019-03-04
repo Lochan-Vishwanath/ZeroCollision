@@ -15,4 +15,8 @@ public class loadlevel : MonoBehaviour {
         StageLoad.stageloading=false;
         SceneManager.LoadScene("Main",LoadSceneMode.Single);
     }
+    public void playaudio()
+    {
+        AudioManager.playaudiogood = true;
+    }
 }

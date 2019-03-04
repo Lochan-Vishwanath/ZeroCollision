@@ -50,10 +50,15 @@ public class ColoursScript : MonoBehaviour {
             if(shownextlvl)
                 nextPanel.gameObject.SetActive(true);
             else
+            {
+                if(!AudioManager.playaudiogood)
                 x.loadlvl(nxtstage);
+            }
+               
 
             if (once)
             {
+                if(shownextlvl)
                 GetComponent<AudioSource>().Play();
                 once = false;
             }

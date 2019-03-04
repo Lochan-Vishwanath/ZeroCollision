@@ -73,8 +73,9 @@ public class RandomMovement : MonoBehaviour {
             {
                     Destroy(gameObject);
                     ColoursScript.no_of_objs--;
-                    Destroy(collision.gameObject);
                     AudioManager.playaudiogood = true;
+                    Destroy(collision.gameObject);
+                    
             }
             else
             {
