@@ -68,6 +68,7 @@ public class warning : MonoBehaviour {
 
     void trigger()
     {
+        if(gameObject.activeInHierarchy)
         StartCoroutine(flash());
     }
     IEnumerator flash()

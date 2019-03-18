@@ -10,6 +10,7 @@ public class SpikeMovement : MonoBehaviour
     //public 
     RectTransform panel;
     GameObject[] objs;
+    public GameObject ParticleEffectOBJ;
     void Start()
     {
         panel = GameObject.Find("Main/Canvas/GAME OVER PANEL").GetComponent<RectTransform>();
@@ -37,6 +38,7 @@ public class SpikeMovement : MonoBehaviour
     {
         if (collision.gameObject.tag == "EnemyA")
         {
+            Instantiate(ParticleEffectOBJ, collision.transform.position, Quaternion.identity);
             Destroy(collision.gameObject);
             //collision.gameObject.SetActive(false);
             

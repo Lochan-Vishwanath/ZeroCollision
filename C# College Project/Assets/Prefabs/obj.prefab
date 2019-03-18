@@ -111,7 +111,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 4704668943749448, guid: bca5f16fb7b5b1b4488de0b570cab22b, type: 3}
-  speed: 0.6
+  speed: 0.55
+  ParticleEffectOBJ: {fileID: 4769258715521532665, guid: cd30e62537734df4e8743485d8846fce,
+    type: 3}
+  RippleEffectOBJ: {fileID: 0}
 --- !u!58 &58527988826661290
 CircleCollider2D:
   m_ObjectHideFlags: 0

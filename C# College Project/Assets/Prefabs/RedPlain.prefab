@@ -120,3 +120,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Show_GameOver_screen: 1
+  ParticleEffectOBJ: {fileID: 4769258715521532665, guid: cd30e62537734df4e8743485d8846fce,
+    type: 3}

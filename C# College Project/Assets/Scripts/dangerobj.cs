@@ -9,6 +9,7 @@ public class dangerobj : MonoBehaviour {
     RectTransform panel;
     public bool Show_GameOver_screen;
     GameObject[] objs;
+    public GameObject ParticleEffectOBJ;
 
     void Start(){
         panel=panel = GameObject.Find("Main/Canvas/GAME OVER PANEL").GetComponent<RectTransform>();
@@ -18,6 +19,7 @@ public class dangerobj : MonoBehaviour {
     {
         if (collision.transform.tag == "EnemyA")
         {
+            Instantiate(ParticleEffectOBJ, collision.transform.position, Quaternion.identity);
             Destroy(collision.gameObject);
             //collision.gameObject.SetActive(false);
             

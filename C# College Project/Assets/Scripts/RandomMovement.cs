@@ -13,10 +13,12 @@ public class RandomMovement : MonoBehaviour {
     //public float Xpos, Ypos;
     Vector3 RandPosition;
     int randnum;
-
+    public GameObject ParticleEffectOBJ;
     GameObject[] objs;
+    RippleEffect RippleEffectOBJ;
 
 	void Start () {
+        RippleEffectOBJ = GameObject.Find("Main/Main Camera").GetComponent<RippleEffect>();
         panel = GameObject.Find("Main/Canvas/GAME OVER PANEL").GetComponent<RectTransform>();
 		Spawnobj();
         objs = GameObject.FindGameObjectsWithTag("EnemyA");
@@ -71,6 +73,9 @@ public class RandomMovement : MonoBehaviour {
             SpriteRenderer renderer = collision.gameObject.GetComponent<SpriteRenderer>();
             if (renderer.color.Equals(GetComponent<SpriteRenderer>().color))
             {
+                //RippleEffectOBJ.RippleMain();
+                    RippleEffectOBJ.rippleNow();
+                    
                     Destroy(gameObject);
                     ColoursScript.no_of_objs--;
                     AudioManager.playaudiogood = true;
@@ -84,12 +89,16 @@ public class RandomMovement : MonoBehaviour {
                     if(obj==null) continue;
                     obj.GetComponent<RandomMovement>().speed=0;
                 }
+                //if(!GameObject.Find("ParticleEffectOBJ"))
+                Instantiate(ParticleEffectOBJ, transform.position,Quaternion.identity);
+                //x.transform.position = transform.position;
                 panel.gameObject.SetActive(true);
                 AudioManager.playaudiogameover = true;
                 StageLoad.stageloading = false;
                 //DragwithMouse.takemouseinput=false;
                 //Dragable.taketouchinput=false;
                 speed = 0f;
+                gameObject.SetActive(false);
             }
         }
     }

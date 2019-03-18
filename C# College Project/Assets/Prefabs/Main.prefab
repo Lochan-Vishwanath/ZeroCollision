@@ -473,7 +473,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1117797343235124}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: af4da848344c72f4787231824fe3e049, type: 3}
   m_Name: 
@@ -1658,6 +1658,7 @@ GameObject:
   - component: {fileID: 5540241633424695036}
   - component: {fileID: 1968186996330811895}
   - component: {fileID: 5859492350745310749}
+  - component: {fileID: 6225501761122732633}
   m_Layer: 8
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1945,6 +1946,21 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   priority: 0
+--- !u!114 &6225501761122732633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956440371941178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f34f30af581c0d4e9a1fd0e99e9005c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RippleMaterial: {fileID: 2100000, guid: f4088419ba3044d429bb1337bb547dce, type: 2}
+  MaxAmount: 20
+  Friction: 0.9
 --- !u!1 &687370179970141068
 GameObject:
   m_ObjectHideFlags: 0

@@ -204,6 +204,8 @@ MonoBehaviour:
   destination1: {fileID: 3852889202971885939}
   destination2: {fileID: 3852889203488740044}
   speed: 0.06
+  ParticleEffectOBJ: {fileID: 4769258715521532665, guid: cd30e62537734df4e8743485d8846fce,
+    type: 3}
 --- !u!1 &3852889203488740047
 GameObject:
   m_ObjectHideFlags: 0
