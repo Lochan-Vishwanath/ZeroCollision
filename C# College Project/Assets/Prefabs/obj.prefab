@@ -114,7 +114,7 @@ MonoBehaviour:
   speed: 0.55
   ParticleEffectOBJ: {fileID: 4769258715521532665, guid: cd30e62537734df4e8743485d8846fce,
     type: 3}
-  RippleEffectOBJ: {fileID: 0}
+  au: {fileID: 920143206, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd, type: 3}
 --- !u!58 &58527988826661290
 CircleCollider2D:
   m_ObjectHideFlags: 0

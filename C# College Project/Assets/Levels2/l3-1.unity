@@ -285,11 +285,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main
       objectReference: {fileID: 0}
-    - target: {fileID: 114996525408164984, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
-        type: 3}
-      propertyPath: nxtstage
-      value: l3-2
-      objectReference: {fileID: 0}
     - target: {fileID: 4641479379229148, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.9831118
@@ -334,6 +329,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 224605276267171414, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5323068854259307199, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: l3-2
+      objectReference: {fileID: 0}
     - target: {fileID: 224404248604975774, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -344,21 +349,54 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 224605276267171414, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7754067320903312956, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
         type: 3}
       propertyPath: m_Text
       value: Level 3 Stage 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5323068854259307199, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
+    - target: {fileID: 7861447854040904674, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
         type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7861447854040904674, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
+        type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7861447854040904674, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
+        type: 3}
+      propertyPath: m_Pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7861447854040904674, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
+        type: 3}
+      propertyPath: Priority
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 7861447854040904674, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
+        type: 3}
+      propertyPath: Pan2D
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7861447854040904674, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
+        type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 920143206, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd, type: 3}
+      propertyPath: next
+      value: 
+      objectReference: {fileID: 8300000, guid: cabfae866cab347928b74b7d0ca6bfa9, type: 3}
+    - target: {fileID: 114996525408164984, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
+        type: 3}
+      propertyPath: nxtstage
       value: l3-2
       objectReference: {fileID: 0}
+    - target: {fileID: 965458553, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: cabfae866cab347928b74b7d0ca6bfa9, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd, type: 3}
 --- !u!1001 &2001712422

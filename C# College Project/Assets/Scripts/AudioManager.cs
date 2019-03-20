@@ -40,4 +40,16 @@ public class AudioManager : MonoBehaviour
             }
         }*/
     }
+    public IEnumerator playgood()
+    {
+        mainau.PlayOneShot(good);
+        yield return new WaitWhile(() => mainau.isPlaying);
+        //do something
+    }
+    public IEnumerator playGameover()
+    {
+        mainau.PlayOneShot(gameover);   
+        yield return new WaitWhile(() => mainau.isPlaying);
+        //do something
+    }
 }

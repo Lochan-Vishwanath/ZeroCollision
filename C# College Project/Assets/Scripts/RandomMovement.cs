@@ -16,6 +16,7 @@ public class RandomMovement : MonoBehaviour {
     public GameObject ParticleEffectOBJ;
     GameObject[] objs;
     RippleEffect RippleEffectOBJ;
+    public AudioManager au;
 
 	void Start () {
         RippleEffectOBJ = GameObject.Find("Main/Main Camera").GetComponent<RippleEffect>();
@@ -76,10 +77,11 @@ public class RandomMovement : MonoBehaviour {
                 //RippleEffectOBJ.RippleMain();
                     RippleEffectOBJ.rippleNow();
                     
-                    Destroy(gameObject);
+                    Destroy(gameObject,au.good.length);
                     ColoursScript.no_of_objs--;
-                    AudioManager.playaudiogood = true;
-                    Destroy(collision.gameObject);
+                AudioManager.playaudiogood = true;
+                //StartCoroutine(au.playgood());
+                Destroy(collision.gameObject);
                     
             }
             else
@@ -93,7 +95,8 @@ public class RandomMovement : MonoBehaviour {
                 Instantiate(ParticleEffectOBJ, transform.position,Quaternion.identity);
                 //x.transform.position = transform.position;
                 panel.gameObject.SetActive(true);
-                AudioManager.playaudiogameover = true;
+                //AudioManager.playaudiogameover = true;
+                StartCoroutine(au.playGameover());                                                                          
                 StageLoad.stageloading = false;
                 //DragwithMouse.takemouseinput=false;
                 //Dragable.taketouchinput=false;

@@ -17,6 +17,6 @@ public class loadlevel : MonoBehaviour {
     }
     public void playaudio()
     {
-        AudioManager.playaudiogood = true;
+        //AudioManager.playaudiogood = true;
     }
 }
