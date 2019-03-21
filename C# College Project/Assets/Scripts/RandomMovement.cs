@@ -95,8 +95,8 @@ public class RandomMovement : MonoBehaviour {
                 Instantiate(ParticleEffectOBJ, transform.position,Quaternion.identity);
                 //x.transform.position = transform.position;
                 panel.gameObject.SetActive(true);
-                //AudioManager.playaudiogameover = true;
-                StartCoroutine(au.playGameover());                                                                          
+                AudioManager.playaudiogameover = true;
+                //StartCoroutine(au.playGameover());                                                                          
                 StageLoad.stageloading = false;
                 //DragwithMouse.takemouseinput=false;
                 //Dragable.taketouchinput=false;
