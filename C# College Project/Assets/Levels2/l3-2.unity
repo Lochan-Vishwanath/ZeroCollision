@@ -232,11 +232,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main
       objectReference: {fileID: 0}
-    - target: {fileID: 114996525408164984, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
-        type: 3}
-      propertyPath: nxtstage
-      value: l3-3
-      objectReference: {fileID: 0}
     - target: {fileID: 4641479379229148, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.9831118
@@ -291,11 +286,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: l3-3
       objectReference: {fileID: 0}
-    - target: {fileID: 5859492350745310749, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 224404248604975774, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -316,16 +306,6 @@ PrefabInstance:
       propertyPath: m_Text
       value: Level 3 Stage 2
       objectReference: {fileID: 0}
-    - target: {fileID: 4393734640373344328, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
-        type: 3}
-      propertyPath: MaxAmount
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 4393734640373344328, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
-        type: 3}
-      propertyPath: Friction
-      value: 0.647
-      objectReference: {fileID: 0}
     - target: {fileID: 6225501761122732633, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
         type: 3}
       propertyPath: MaxAmount
@@ -335,6 +315,26 @@ PrefabInstance:
         type: 3}
       propertyPath: Friction
       value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114996525408164984, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
+        type: 3}
+      propertyPath: nxtstage
+      value: l3-3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859492350745310749, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4393734640373344328, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
+        type: 3}
+      propertyPath: MaxAmount
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4393734640373344328, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
+        type: 3}
+      propertyPath: Friction
+      value: 0.647
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4393734640373344328, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd, type: 3}
@@ -352,7 +352,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 423010267}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f34f30af581c0d4e9a1fd0e99e9005c, type: 3}
   m_Name: 

@@ -17,10 +17,12 @@ public class RandomMovement : MonoBehaviour {
     GameObject[] objs;
     RippleEffect RippleEffectOBJ;
     public AudioManager au;
+    ScreenShake ss;
 
 	void Start () {
         RippleEffectOBJ = GameObject.Find("Main/Main Camera").GetComponent<RippleEffect>();
         panel = GameObject.Find("Main/Canvas/GAME OVER PANEL").GetComponent<RectTransform>();
+        ss = Camera.main.GetComponent<ScreenShake>();
 		Spawnobj();
         objs = GameObject.FindGameObjectsWithTag("EnemyA");
 	}
@@ -63,11 +65,11 @@ public class RandomMovement : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.transform.tag == "GOD") {
+        /*if (collision.transform.tag == "GOD") {
             Destroy(gameObject);
             ColoursScript.no_of_objs--;
             AudioManager.playaudiogood = true;
-        }
+        }*/
 
         if (collision.transform.tag == "EnemyA")
         {
@@ -75,14 +77,13 @@ public class RandomMovement : MonoBehaviour {
             if (renderer.color.Equals(GetComponent<SpriteRenderer>().color))
             {
                 //RippleEffectOBJ.RippleMain();
-                    RippleEffectOBJ.rippleNow();
-                    
-                    Destroy(gameObject,au.good.length);
-                    ColoursScript.no_of_objs--;
+                RippleEffectOBJ.rippleNow();
                 AudioManager.playaudiogood = true;
-                //StartCoroutine(au.playgood());
+                ColoursScript.no_of_objs--;
+                ss.shakeScreen();
                 Destroy(collision.gameObject);
-                    
+                Destroy(gameObject,au.good.length);
+                //StartCoroutine(au.playgood());  
             }
             else
             {
