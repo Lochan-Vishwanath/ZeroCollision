@@ -1659,6 +1659,7 @@ GameObject:
   - component: {fileID: 1968186996330811895}
   - component: {fileID: 5859492350745310749}
   - component: {fileID: 6225501761122732633}
+  - component: {fileID: 3179668396747877174}
   m_Layer: 8
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1885,7 +1886,7 @@ MonoBehaviour:
   volumeLayer:
     serializedVersion: 2
     m_Bits: 256
-  stopNaNPropagation: 1
+  stopNaNPropagation: 0
   finalBlitToCameraTarget: 1
   antialiasingMode: 1
   temporalAntialiasing:
@@ -1894,7 +1895,7 @@ MonoBehaviour:
     stationaryBlending: 0.95
     motionBlending: 0.85
   subpixelMorphologicalAntialiasing:
-    quality: 2
+    quality: 0
   fastApproximateAntialiasing:
     fastMode: 1
     keepAlpha: 0
@@ -1953,7 +1954,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1956440371941178}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f34f30af581c0d4e9a1fd0e99e9005c, type: 3}
   m_Name: 
@@ -1961,6 +1962,25 @@ MonoBehaviour:
   RippleMaterial: {fileID: 2100000, guid: f4088419ba3044d429bb1337bb547dce, type: 2}
   MaxAmount: 20
   Friction: 0.9
+--- !u!95 &3179668396747877174
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956440371941178}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1cd39cbbb55aa2f4d89c34f552712004, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &687370179970141068
 GameObject:
   m_ObjectHideFlags: 0

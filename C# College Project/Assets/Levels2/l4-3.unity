@@ -389,6 +389,16 @@ PrefabInstance:
       propertyPath: camAnim
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1968186996330811895, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
+        type: 3}
+      propertyPath: m_ShowToolkit
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1968186996330811895, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
+        type: 3}
+      propertyPath: m_ShowCustomSorter
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6143690855361928217, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd, type: 3}
     - {fileID: 5800133478863507723, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd, type: 3}
@@ -958,7 +968,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 1020845694}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f34f30af581c0d4e9a1fd0e99e9005c, type: 3}
   m_Name: 

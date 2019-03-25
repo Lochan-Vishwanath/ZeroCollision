@@ -6,6 +6,8 @@ public class Dragable : MonoBehaviour {
 
 	Collider2D mycoll;
 	bool objtouched=false;
+    bool objpop = false;
+
 	//public static bool taketouchinput=true;
 	void Start () {
 		mycoll=GetComponent<Collider2D>();
@@ -21,10 +23,12 @@ public class Dragable : MonoBehaviour {
 			if(!objtouched)
 				if(mycoll==Physics2D.OverlapCircle(touchPosworld2D,0.01f)){
 					objtouched=true;
+                    objpop = true;
 				}
-            if (objtouched)
+            if (objpop)
             {
                 StartCoroutine(pop());
+                    objpop = false;
             }
 		    if(objtouched){
 			    transform.position=touchPosworld2D;
