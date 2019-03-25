@@ -10,15 +10,18 @@ public class dangerobj : MonoBehaviour {
     public bool Show_GameOver_screen;
     GameObject[] objs;
     public GameObject ParticleEffectOBJ;
+    ScreenShake ss;
 
     void Start(){
         panel=panel = GameObject.Find("Main/Canvas/GAME OVER PANEL").GetComponent<RectTransform>();
+        ss = Camera.main.GetComponent<ScreenShake>();
         objs = GameObject.FindGameObjectsWithTag("EnemyA");
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.transform.tag == "EnemyA")
         {
+            ss.shakeScreenHard();
             Instantiate(ParticleEffectOBJ, collision.transform.position, Quaternion.identity);
             Destroy(collision.gameObject);
             //collision.gameObject.SetActive(false);

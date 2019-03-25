@@ -87,6 +87,7 @@ public class RandomMovement : MonoBehaviour {
             }
             else
             {
+                ss.shakeScreenHard();
                 foreach (GameObject obj in objs)
                 {
                     if(obj==null) continue;

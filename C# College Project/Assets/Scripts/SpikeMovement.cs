@@ -11,8 +11,10 @@ public class SpikeMovement : MonoBehaviour
     RectTransform panel;
     GameObject[] objs;
     public GameObject ParticleEffectOBJ;
+    ScreenShake ss;
     void Start()
     {
+        ss = Camera.main.GetComponent<ScreenShake>();
         panel = GameObject.Find("Main/Canvas/GAME OVER PANEL").GetComponent<RectTransform>();
         objs = GameObject.FindGameObjectsWithTag("EnemyA");
         destination1.GetComponent<SpriteRenderer>().color=new Color(destination1.GetComponent<SpriteRenderer>().color.r,destination1.GetComponent<SpriteRenderer>().color.g,destination1.GetComponent<SpriteRenderer>().color.b,0f);
@@ -38,6 +40,7 @@ public class SpikeMovement : MonoBehaviour
     {
         if (collision.gameObject.tag == "EnemyA")
         {
+            ss.shakeScreenHard();
             Instantiate(ParticleEffectOBJ, collision.transform.position, Quaternion.identity);
             Destroy(collision.gameObject);
             //collision.gameObject.SetActive(false);

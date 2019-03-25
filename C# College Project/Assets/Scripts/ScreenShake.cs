@@ -15,4 +15,9 @@ public class ScreenShake : MonoBehaviour
     {
         animator.SetTrigger("Shake");
     }
+
+    public void shakeScreenHard()
+    {
+        animator.SetTrigger("HardShake");
+    }
 }
