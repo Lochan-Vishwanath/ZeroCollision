@@ -8,6 +8,7 @@ TagManager:
   - EnemyB
   - GOD
   - Spike
+  - music
   layers:
   - Default
   - TransparentFX

@@ -59,7 +59,7 @@ public class ColoursScript : MonoBehaviour {
             if (once)
             {
                 if(shownextlvl)
-                GetComponent<AudioSource>().Play();
+                //GetComponent<AudioSource>().Play();
                 once = false;
             }
             
