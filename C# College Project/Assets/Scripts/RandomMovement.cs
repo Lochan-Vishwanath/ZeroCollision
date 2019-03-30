@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class RandomMovement : MonoBehaviour {
-    
+
+    public GameObject[] sprite;
     public Transform prefab;
     //public 
     RectTransform panel;
@@ -77,7 +78,9 @@ public class RandomMovement : MonoBehaviour {
             if (renderer.color.Equals(GetComponent<SpriteRenderer>().color))
             {
                 //RippleEffectOBJ.RippleMain();
-                RippleEffectOBJ.rippleNow();
+                //RippleEffectOBJ.rippleNow();
+                GameObject splater = Instantiate(sprite[Random.Range(0,sprite.Length)],transform.position,Quaternion.identity) as GameObject;
+                splater.GetComponent<SpriteRenderer>().color=renderer.color;
                 AudioManager.playaudiogood = true;
                 ColoursScript.no_of_objs--;
                 ss.shakeScreen();

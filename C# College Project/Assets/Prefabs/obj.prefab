@@ -111,6 +111,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9319df1e213bc0b4d88e9bdd0b095f51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sprite:
+  - {fileID: 2624825848705040896, guid: ff54c5eb6f01d934eb3a752979c6e79d, type: 3}
+  - {fileID: 4875867334735782987, guid: 02971e59a6203e949b01051eb6c07da8, type: 3}
+  - {fileID: 4407152305643574881, guid: 0932732a781d9d54f9e6403826542422, type: 3}
+  - {fileID: 3523100245762923727, guid: e3e739ed4504ce049ae84319f756eb98, type: 3}
   prefab: {fileID: 4704668943749448, guid: bca5f16fb7b5b1b4488de0b570cab22b, type: 3}
   speed: 0.55
   ParticleEffectOBJ: {fileID: 4769258715521532665, guid: cd30e62537734df4e8743485d8846fce,
