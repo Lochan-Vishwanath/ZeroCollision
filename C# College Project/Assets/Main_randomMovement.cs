@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Main_randomMovement : MonoBehaviour
 {
+    /*
     public Transform prefab;
     Transform destination;
     public float speed = 0.8f;
@@ -57,5 +58,26 @@ public class Main_randomMovement : MonoBehaviour
 
         destination = Instantiate(prefab, RandPosition, Quaternion.identity).GetComponent<Transform>();
     }
+*/
 
+    public GameObject target,splat;
+    public float speed;
+    //public AudioClip SPLAT;
+    //public bool playaudio=false;
+
+    private void Start()
+    {
+        splat.SetActive(false);
+    }
+    private void Update()
+    {
+        transform.position = Vector2.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);
+
+        if (Vector2.Distance(target.transform.position, transform.position) == 0)
+            if (!splat.activeInHierarchy) {
+                splat.SetActive(true);
+                if (GetComponent<AudioSource>()!=null)
+                    GetComponent<AudioSource>().Play();
+            }
+    }
 }

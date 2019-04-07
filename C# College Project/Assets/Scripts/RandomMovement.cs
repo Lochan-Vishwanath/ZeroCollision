@@ -30,6 +30,7 @@ public class RandomMovement : MonoBehaviour {
 	
 	
 	void Update () {
+
         transform.position=Vector2.MoveTowards(transform.position,destination.position,speed*Time.deltaTime);
 
 		if(Vector2.Distance(destination.position,transform.position)==0){
@@ -79,13 +80,14 @@ public class RandomMovement : MonoBehaviour {
             {
                 //RippleEffectOBJ.RippleMain();
                 //RippleEffectOBJ.rippleNow();
-                GameObject splater = Instantiate(sprite[Random.Range(0,sprite.Length)],transform.position,Quaternion.identity) as GameObject;
+                GameObject splater = Instantiate(sprite[Random.Range(0,sprite.Length)],transform.position,Quaternion.Euler(0,0,Random.Range(0,360)));
                 splater.GetComponent<SpriteRenderer>().color=renderer.color;
                 AudioManager.playaudiogood = true;
                 ColoursScript.no_of_objs--;
                 ss.shakeScreen();
                 Destroy(collision.gameObject);
                 Destroy(gameObject,au.good.length);
+                CancelInvoke();
                 //StartCoroutine(au.playgood());  
             }
             else
@@ -105,6 +107,7 @@ public class RandomMovement : MonoBehaviour {
                 StageLoad.stageloading = false;
                 //DragwithMouse.takemouseinput=false;
                 //Dragable.taketouchinput=false;
+                CancelInvoke();
                 speed = 0f;
                 gameObject.SetActive(false);
             }

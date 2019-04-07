@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ColoursScript : MonoBehaviour {
 
@@ -10,7 +11,7 @@ public class ColoursScript : MonoBehaviour {
     public static int no_of_objs = 0;
     [HideInInspector]
     public GameObject[] objs;
-
+    public RectTransform GameOverPanel;
     bool once = true;
     public bool shownextlvl=false;
     loadlevel x;
@@ -47,7 +48,7 @@ public class ColoursScript : MonoBehaviour {
         
         if (no_of_objs <= 0)
         {
-            if(shownextlvl)
+            if(shownextlvl && !GameOverPanel.gameObject.activeInHierarchy)
                 nextPanel.gameObject.SetActive(true);
             else
             {
