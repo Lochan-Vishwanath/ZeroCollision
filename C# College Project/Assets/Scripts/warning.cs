@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class warning : MonoBehaviour {
 
-    SpriteRenderer other,frame;
+    SpriteRenderer other;// frame;
    // Color mycolor;
    // bool checkingDone = false;
     int no;
@@ -84,11 +84,11 @@ public class warning : MonoBehaviour {
         if(gameObject.activeInHierarchy)
         StartCoroutine(flash());
     }
-    void triggerframe()
+   /* void triggerframe()
     {
         if (gameObject.activeInHierarchy)
             StartCoroutine(flashframe());
-    }
+    }*/
     IEnumerator flash()
     {
         Color colour = other.color;
@@ -98,7 +98,7 @@ public class warning : MonoBehaviour {
         colour.a = 0f;
         other.color = colour;
     }
-    IEnumerator flashframe()
+    /*IEnumerator flashframe()
     {
         Color colour = frame.color;
         colour.a = 0.5f;
@@ -106,5 +106,5 @@ public class warning : MonoBehaviour {
         yield return new WaitForSeconds(0.3f);
         colour.a = 0f;
         frame.color = colour;
-    }
+    }*/
 }
