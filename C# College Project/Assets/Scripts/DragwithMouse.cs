@@ -7,7 +7,7 @@ public class DragwithMouse : MonoBehaviour {
     RectTransform panel;
     //public static bool takemouseinput=true;
     void Start(){
-        panel = GameObject.Find("Main/Canvas/GAME OVER PANEL").GetComponent<RectTransform>();
+        panel = GameObject.Find("Main/Canvas/Game-Over Menu").GetComponent<RectTransform>();
         //takemouseinput=true;
     }
 //    void LateUpdate(){

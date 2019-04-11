@@ -13,7 +13,7 @@ public class dangerobj : MonoBehaviour {
     ScreenShake ss;
 
     void Start(){
-        panel=panel = GameObject.Find("Main/Canvas/GAME OVER PANEL").GetComponent<RectTransform>();
+        panel=panel = GameObject.Find("Main/Canvas/Game-Over Menu").GetComponent<RectTransform>();
         ss = Camera.main.GetComponent<ScreenShake>();
         objs = GameObject.FindGameObjectsWithTag("EnemyA");
     }
