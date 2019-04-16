@@ -9,6 +9,5 @@ public class Restart : MonoBehaviour {
     {
         StageLoad.stageloading=false;   
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        
     }
 }

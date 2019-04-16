@@ -15,7 +15,7 @@ public class SpikeMovement : MonoBehaviour
     void Start()
     {
         ss = Camera.main.GetComponent<ScreenShake>();
-        panel = GameObject.Find("Main/Canvas/GAME OVER PANEL").GetComponent<RectTransform>();
+        panel = GameObject.Find("Main/Canvas/Game-Over Menu").GetComponent<RectTransform>();
         objs = GameObject.FindGameObjectsWithTag("EnemyA");
         destination1.GetComponent<SpriteRenderer>().color=new Color(destination1.GetComponent<SpriteRenderer>().color.r,destination1.GetComponent<SpriteRenderer>().color.g,destination1.GetComponent<SpriteRenderer>().color.b,0f);
         destination2.GetComponent<SpriteRenderer>().color=new Color(destination2.GetComponent<SpriteRenderer>().color.r,destination2.GetComponent<SpriteRenderer>().color.g,destination2.GetComponent<SpriteRenderer>().color.b,0f);

@@ -19,6 +19,7 @@ public class RandomMovement : MonoBehaviour {
     RippleEffect RippleEffectOBJ;
     public AudioManager au;
     ScreenShake ss;
+    public static bool notPaused = true;
 
 	void Start () {
         RippleEffectOBJ = GameObject.Find("Main/Main Camera").GetComponent<RippleEffect>();
@@ -30,8 +31,8 @@ public class RandomMovement : MonoBehaviour {
 	
 	
 	void Update () {
-
-        transform.position=Vector2.MoveTowards(transform.position,destination.position,speed*Time.deltaTime);
+        if(notPaused)
+            transform.position=Vector2.MoveTowards(transform.position,destination.position,speed*Time.deltaTime);
 
 		if(Vector2.Distance(destination.position,transform.position)==0){
 			Destroy(destination.gameObject);
