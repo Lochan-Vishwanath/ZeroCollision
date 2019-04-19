@@ -8,14 +8,14 @@ public class SpikeMovement : MonoBehaviour
     public float speed=0.07f;
     Transform destination;
     //public 
-    RectTransform panel;
+    //RectTransform panel;
     GameObject[] objs;
     public GameObject ParticleEffectOBJ;
     ScreenShake ss;
     void Start()
     {
         ss = Camera.main.GetComponent<ScreenShake>();
-        panel = GameObject.Find("Main/Canvas/Game-Over Menu").GetComponent<RectTransform>();
+        //panel = GameObject.Find("Main/Canvas/Game-Over Menu").GetComponent<RectTransform>();
         objs = GameObject.FindGameObjectsWithTag("EnemyA");
         destination1.GetComponent<SpriteRenderer>().color=new Color(destination1.GetComponent<SpriteRenderer>().color.r,destination1.GetComponent<SpriteRenderer>().color.g,destination1.GetComponent<SpriteRenderer>().color.b,0f);
         destination2.GetComponent<SpriteRenderer>().color=new Color(destination2.GetComponent<SpriteRenderer>().color.r,destination2.GetComponent<SpriteRenderer>().color.g,destination2.GetComponent<SpriteRenderer>().color.b,0f);
@@ -52,7 +52,8 @@ public class SpikeMovement : MonoBehaviour
                     obj.GetComponent<RandomMovement>().speed=0;
                 }
             //}
-            panel.gameObject.SetActive(true);
+            //panel.gameObject.SetActive(true);
+            ColoursScript.GameOver = true;
             AudioManager.playaudiogameover = true;
             StageLoad.stageloading = false;
             //DragwithMouse.takemouseinput=false;

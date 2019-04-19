@@ -107,6 +107,7 @@ RectTransform:
   - {fileID: 224609487575871092}
   - {fileID: 1606229604176524779}
   - {fileID: 8974205647569660457}
+  - {fileID: 6046447854180596401}
   - {fileID: 224926541545681076}
   - {fileID: 224649671117047002}
   - {fileID: 224893137384911840}
@@ -534,7 +535,7 @@ RectTransform:
   m_LocalScale: {x: 1.0000426, y: 1.0000426, z: 1.0000422}
   m_Children: []
   m_Father: {fileID: 224605276267171414}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -793,7 +794,7 @@ RectTransform:
   m_Children:
   - {fileID: 3599923175862006922}
   m_Father: {fileID: 224605276267171414}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1216,7 +1217,7 @@ RectTransform:
   m_LocalScale: {x: 1.0000422, y: 1.0000422, z: 1.0000422}
   m_Children: []
   m_Father: {fileID: 224605276267171414}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1411,7 +1412,6 @@ MonoBehaviour:
     rgba: 4294954018
   nextPanel: {fileID: 6046447854180596401}
   objs: []
-  GameOverPanel: {fileID: 2940098533960586128}
   shownextlvl: 1
   nxtstage: Main
 --- !u!82 &965458553
@@ -1952,11 +1952,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -2416,7 +2416,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2820921235089492892
 Transform:
   m_ObjectHideFlags: 0
@@ -2609,7 +2609,7 @@ RectTransform:
   - {fileID: 4276524059828101131}
   - {fileID: 9042329993558637144}
   m_Father: {fileID: 224605276267171414}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -3280,8 +3280,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 4750829632968595871}
-        m_MethodName: loadlvl
-        m_Mode: 5
+        m_MethodName: nextLevel
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3492,7 +3492,7 @@ RectTransform:
   - {fileID: 405974765064062702}
   - {fileID: 5662162764586902628}
   m_Father: {fileID: 224605276267171414}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -3603,7 +3603,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 'Level 4 Stage 2
+  m_text: 'Level 0 Stage 0
 
 '
   m_isRightToLeft: 0
@@ -3682,11 +3682,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -4263,7 +4263,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4967459837406429259}
-  - {fileID: 6046447854180596401}
   m_Father: {fileID: 224605276267171414}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4592,11 +4591,11 @@ MonoBehaviour:
     lineCount: 8
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -4812,12 +4811,12 @@ GameObject:
   - component: {fileID: 8830486975560349254}
   - component: {fileID: 5939808603082720890}
   m_Layer: 5
-  m_Name: NEXT PANEL
+  m_Name: Next Level Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6046447854180596401
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4830,13 +4829,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3047102297324531905}
-  m_Father: {fileID: 8974205647569660457}
-  m_RootOrder: 1
+  m_Father: {fileID: 224605276267171414}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -279.9, y: -570.9998}
-  m_SizeDelta: {x: 634.00006, y: 1196.7849}
+  m_AnchoredPosition: {x: 0.000030517578, y: 0.00012207031}
+  m_SizeDelta: {x: 0.00012207031, y: 0.2849121}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8830486975560349254
 CanvasRenderer:

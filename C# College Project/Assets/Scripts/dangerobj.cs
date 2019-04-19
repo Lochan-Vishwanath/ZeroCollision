@@ -6,14 +6,14 @@ using UnityEngine.UI;
 public class dangerobj : MonoBehaviour {
 
     //public 
-    RectTransform panel;
+   //RectTransform panel;
     public bool Show_GameOver_screen;
     GameObject[] objs;
     public GameObject ParticleEffectOBJ;
     ScreenShake ss;
 
     void Start(){
-        panel=panel = GameObject.Find("Main/Canvas/Game-Over Menu").GetComponent<RectTransform>();
+        //panel=panel = GameObject.Find("Main/Canvas/Game-Over Menu").GetComponent<RectTransform>();
         ss = Camera.main.GetComponent<ScreenShake>();
         objs = GameObject.FindGameObjectsWithTag("EnemyA");
     }
@@ -35,7 +35,8 @@ public class dangerobj : MonoBehaviour {
             //}
             if (Show_GameOver_screen)
             {
-                panel.gameObject.SetActive(true);
+                //panel.gameObject.SetActive(true);
+                ColoursScript.GameOver = true;
                 AudioManager.playaudiogameover = true;
                 StageLoad.stageloading = false;
              //   DragwithMouse.takemouseinput=false;

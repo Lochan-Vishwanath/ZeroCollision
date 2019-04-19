@@ -9,10 +9,12 @@ public class ColoursScript : MonoBehaviour {
     SpriteRenderer Myrender;
     public RectTransform nextPanel;
     public static int no_of_objs = 0;
+    public static bool GameOver = false;
     [HideInInspector]
     public GameObject[] objs;
-    public RectTransform GameOverPanel;
-    bool once = true;
+    RectTransform GameOverPanel;
+    RectTransform panel;
+    //bool once = true;
     public bool shownextlvl=false;
     loadlevel x;
 
@@ -32,8 +34,10 @@ public class ColoursScript : MonoBehaviour {
 
     private void Start()
     {
-        x=GetComponent<loadlevel>();
-        once = true;
+        panel = GameObject.Find("Main/Canvas/Game-Over Menu").GetComponent<RectTransform>();
+        GameOver = false;
+        x =GetComponent<loadlevel>();
+        //once = true;
         no_of_objs = 0;
         objs = GameObject.FindGameObjectsWithTag("EnemyA");
 
@@ -44,11 +48,14 @@ public class ColoursScript : MonoBehaviour {
         //Debug.Log(no_of_objs);
     }
     private void LateUpdate()
-    {   
-        
+    {
+        if (GameOver)
+            StartCoroutine(waitGameOver());
         if (no_of_objs <= 0)
         {
-            if(shownextlvl && !GameOverPanel.gameObject.activeInHierarchy)
+            StartCoroutine(waitNextStage());
+           
+            /*if(shownextlvl && !GameOverPanel.gameObject.activeInHierarchy)
                 nextPanel.gameObject.SetActive(true);
             else
             {
@@ -62,7 +69,7 @@ public class ColoursScript : MonoBehaviour {
                 if(shownextlvl)
                 //GetComponent<AudioSource>().Play();
                 once = false;
-            }
+            }*/
             
         }
     }
@@ -80,4 +87,16 @@ public class ColoursScript : MonoBehaviour {
         Gizmos.DrawSphere(RandPosition3, 0.2f);
         Gizmos.DrawSphere(RandPosition4, 0.2f);
      }
+
+    IEnumerator waitNextStage()
+    {
+        yield return new WaitForSeconds(0.25f);
+        x.nextStage();
+    }
+    IEnumerator waitGameOver()
+    {
+        //Debug.Log("here");
+        yield return new WaitForSeconds(0.7f);
+        panel.gameObject.SetActive(true);
+    }
 }

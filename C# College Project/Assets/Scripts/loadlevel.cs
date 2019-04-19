@@ -5,7 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class loadlevel : MonoBehaviour {
 
-	public void loadlvl(string lvlName)
+    RectTransform nextLevelMenu;
+    Scene thisScene;
+    char[] lvlname = "l0-0".ToCharArray();
+    private void Start()
+    {
+        thisScene = SceneManager.GetActiveScene();
+        lvlname = thisScene.name.ToCharArray();
+        nextLevelMenu = GameObject.Find("Main/Canvas/Next Level Menu").GetComponent<RectTransform>();
+    }
+    public void loadlvl(string lvlName)
     {
         StageLoad.stageloading=false;
         SceneManager.LoadScene(lvlName,LoadSceneMode.Single);
@@ -21,14 +30,28 @@ public class loadlevel : MonoBehaviour {
     }
     public void resetToLevelHead()
     {
-        Scene thisScene = SceneManager.GetActiveScene();
-        char[] lvlname = thisScene.name.ToCharArray();
-        char[] newlvlname="l0-0".ToCharArray();
+        /*char[] newlvlname="l0-0".ToCharArray();
         newlvlname[0] = lvlname[0];
         newlvlname[1] = lvlname[1];
         newlvlname[2] = lvlname[2];
         newlvlname[3] = '1';
-        Debug.Log(newlvlname.ToString());
-        SceneManager.LoadScene(new string(newlvlname), LoadSceneMode.Single);
+        //Debug.Log(newlvlname.ToString());
+        SceneManager.LoadScene(new string(newlvlname), LoadSceneMode.Single);*/
+        SceneManager.LoadScene(lvlname[0].ToString() + lvlname[1].ToString() + lvlname[2].ToString() + ('1').ToString(), LoadSceneMode.Single);
+    }
+    public void nextStage()
+    {
+        if (lvlname[3] == '3')
+        {
+            nextLevelMenu.gameObject.SetActive(true);
+        }
+        else 
+        {
+            SceneManager.LoadScene(lvlname[0].ToString() + lvlname[1].ToString() + lvlname[2].ToString() + ((lvlname[3] - '0' + 1)).ToString(), LoadSceneMode.Single);
+        }  
+    }
+    public void nextLevel()
+    {
+        SceneManager.LoadScene(lvlname[0].ToString() + ((lvlname[1] - '0' + 1)).ToString() + lvlname[2].ToString() + ('1').ToString(), LoadSceneMode.Single);
     }
 }

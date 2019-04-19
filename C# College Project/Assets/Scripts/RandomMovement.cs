@@ -8,7 +8,7 @@ public class RandomMovement : MonoBehaviour {
     public GameObject[] sprite;
     public Transform prefab;
     //public 
-    RectTransform panel;
+    
 	Transform destination;
 	public float speed=0.8f;
     //public float Xpos, Ypos;
@@ -16,14 +16,14 @@ public class RandomMovement : MonoBehaviour {
     int randnum;
     public GameObject ParticleEffectOBJ;
     GameObject[] objs;
-    RippleEffect RippleEffectOBJ;
+    //RippleEffect RippleEffectOBJ;
     public AudioManager au;
     ScreenShake ss;
     public static bool notPaused = true;
 
 	void Start () {
-        RippleEffectOBJ = GameObject.Find("Main/Main Camera").GetComponent<RippleEffect>();
-        panel = GameObject.Find("Main/Canvas/Game-Over Menu").GetComponent<RectTransform>();
+        //RippleEffectOBJ = GameObject.Find("Main/Main Camera").GetComponent<RippleEffect>();
+        
         ss = Camera.main.GetComponent<ScreenShake>();
 		Spawnobj();
         objs = GameObject.FindGameObjectsWithTag("EnemyA");
@@ -102,7 +102,8 @@ public class RandomMovement : MonoBehaviour {
                 //if(!GameObject.Find("ParticleEffectOBJ"))
                 Instantiate(ParticleEffectOBJ, transform.position,Quaternion.identity);
                 //x.transform.position = transform.position;
-                panel.gameObject.SetActive(true);
+                //StartCoroutine(wait());
+                ColoursScript.GameOver = true;
                 AudioManager.playaudiogameover = true;
                 //StartCoroutine(au.playGameover());                                                                          
                 StageLoad.stageloading = false;
@@ -114,6 +115,7 @@ public class RandomMovement : MonoBehaviour {
             }
         }
     }
+   
 }
 /* if(nextPanel.gameObject.activeInHierarchy){
             foreach (GameObject obj in objs)
