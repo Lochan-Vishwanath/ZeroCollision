@@ -8,11 +8,19 @@ public class loadlevel : MonoBehaviour {
     RectTransform nextLevelMenu;
     Scene thisScene;
     char[] lvlname = "l0-0".ToCharArray();
+    List<string> scenesInBuild = new List<string>();
     private void Start()
     {
         thisScene = SceneManager.GetActiveScene();
         lvlname = thisScene.name.ToCharArray();
         nextLevelMenu = GameObject.Find("Main/Canvas/Next Level Menu").GetComponent<RectTransform>();
+        
+        for (int i = 1; i < SceneManager.sceneCountInBuildSettings; i++)
+        {
+            string scenePath = SceneUtility.GetScenePathByBuildIndex(i);
+            int lastSlash = scenePath.LastIndexOf("/");
+            scenesInBuild.Add(scenePath.Substring(lastSlash + 1, scenePath.LastIndexOf(".") - lastSlash - 1));
+        }
     }
     public void loadlvl(string lvlName)
     {
@@ -52,6 +60,9 @@ public class loadlevel : MonoBehaviour {
     }
     public void nextLevel()
     {
-        SceneManager.LoadScene(lvlname[0].ToString() + ((lvlname[1] - '0' + 1)).ToString() + lvlname[2].ToString() + ('1').ToString(), LoadSceneMode.Single);
+        if (scenesInBuild.Contains(lvlname[0].ToString() + ((lvlname[1] - '0' + 1)).ToString() + lvlname[2].ToString() + ('1').ToString()))
+            SceneManager.LoadScene(lvlname[0].ToString() + ((lvlname[1] - '0' + 1)).ToString() + lvlname[2].ToString() + ('1').ToString(), LoadSceneMode.Single);
+        else
+            SceneManager.LoadScene("Main",LoadSceneMode.Single);
     }
 }
