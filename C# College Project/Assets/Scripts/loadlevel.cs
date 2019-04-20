@@ -13,7 +13,8 @@ public class loadlevel : MonoBehaviour {
     {
         thisScene = SceneManager.GetActiveScene();
         lvlname = thisScene.name.ToCharArray();
-        nextLevelMenu = GameObject.Find("Main/Canvas/Next Level Menu").GetComponent<RectTransform>();
+        if(GameObject.Find("Main/Canvas/Next Level Menu").GetComponent<RectTransform>()!=null)
+            nextLevelMenu = GameObject.Find("Main/Canvas/Next Level Menu").GetComponent<RectTransform>();
         
         for (int i = 1; i < SceneManager.sceneCountInBuildSettings; i++)
         {
