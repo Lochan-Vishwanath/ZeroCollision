@@ -68,11 +68,15 @@ public class RandomMovement : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        /*if (collision.transform.tag == "GOD") {
-            Destroy(gameObject);
+        if (collision.transform.tag == "GOD") {
             ColoursScript.no_of_objs--;
             AudioManager.playaudiogood = true;
-        }*/
+            ss.shakeScreen();
+            //Destroy(gameObject,au.good.length);
+            Destroy(gameObject);
+            GameObject splater = Instantiate(sprite[Random.Range(0,sprite.Length)],transform.position,Quaternion.Euler(0,0,Random.Range(0,360)));
+            splater.GetComponent<SpriteRenderer>().color=GetComponent<SpriteRenderer>().color;
+        }
 
         if (collision.transform.tag == "EnemyA")
         {
