@@ -5,6 +5,7 @@ using UnityEngine;
 public class DragwithMouse : MonoBehaviour {
     bool clicked = false;
     RectTransform panel;
+    public static bool cutoff=false;
     //public static bool takemouseinput=true;
     void Start(){
         panel = GameObject.Find("Main/Canvas/Game-Over Menu").GetComponent<RectTransform>();
@@ -20,6 +21,7 @@ public class DragwithMouse : MonoBehaviour {
     }
     private void OnMouseUp()
     {
+        cutoff=false;
         clicked = true;
     }
     private void OnMouseDrag()
@@ -29,7 +31,7 @@ public class DragwithMouse : MonoBehaviour {
             StartCoroutine(pop());
             clicked = true;
         }
-        if(StageLoad.stageloading)// && takemouseinput)
+        if(StageLoad.stageloading && !cutoff)// && takemouseinput)
             transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
     
