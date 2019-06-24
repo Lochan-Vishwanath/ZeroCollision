@@ -54,10 +54,12 @@ public class loadlevel : MonoBehaviour {
         {
             nextLevelMenu.gameObject.SetActive(true);
         }
-        else 
+        else if (scenesInBuild.Contains(lvlname[0].ToString() + lvlname[1].ToString() + lvlname[2].ToString() + ((lvlname[3] - '0' + 1)).ToString()))
         {
             SceneManager.LoadScene(lvlname[0].ToString() + lvlname[1].ToString() + lvlname[2].ToString() + ((lvlname[3] - '0' + 1)).ToString(), LoadSceneMode.Single);
         }  
+        else
+            SceneManager.LoadScene("Main",LoadSceneMode.Single);
     }
     public void nextLevel()
     {
