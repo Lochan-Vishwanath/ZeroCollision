@@ -397,7 +397,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a08484478ba21254ea75519cd158703c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  good: {fileID: 8300000, guid: f662b885925e1c747a39450ba2d1526f, type: 3}
+  good: {fileID: 8300000, guid: 7bef0064f8567430cac22499c6b93d4f, type: 3}
   gameover: {fileID: 8300000, guid: ff5f85da24bc943d1abdc5760a22bc81, type: 3}
   next: {fileID: 8300000, guid: cabfae866cab347928b74b7d0ca6bfa9, type: 3}
 --- !u!114 &1108532797773379701

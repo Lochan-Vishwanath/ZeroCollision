@@ -54,7 +54,7 @@ LightmapSettings:
     m_EnableBakedLightmaps: 0
     m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
-    serializedVersion: 10
+    serializedVersion: 12
     m_Resolution: 2
     m_BakeResolution: 40
     m_AtlasSize: 1024
@@ -62,6 +62,7 @@ LightmapSettings:
     m_AOMaxDistance: 1
     m_CompAOExponent: 1
     m_CompAOExponentDirect: 0
+    m_ExtractAmbientOcclusion: 0
     m_Padding: 2
     m_LightmapParameters: {fileID: 0}
     m_LightmapsBakeMode: 1
@@ -76,10 +77,16 @@ LightmapSettings:
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 500
     m_PVRBounces: 2
+    m_PVREnvironmentSampleCount: 500
+    m_PVREnvironmentReferencePointCount: 2048
+    m_PVRFilteringMode: 2
+    m_PVRDenoiserTypeDirect: 0
+    m_PVRDenoiserTypeIndirect: 0
+    m_PVRDenoiserTypeAO: 0
     m_PVRFilterTypeDirect: 0
     m_PVRFilterTypeIndirect: 0
     m_PVRFilterTypeAO: 0
-    m_PVRFilteringMode: 1
+    m_PVREnvironmentMIS: 0
     m_PVRCulling: 1
     m_PVRFilteringGaussRadiusDirect: 1
     m_PVRFilteringGaussRadiusIndirect: 5
@@ -88,6 +95,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
+    m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -112,12 +120,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!224 &631892208 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 224044102290254704, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
-    type: 3}
-  m_PrefabInstance: {fileID: 1073278060}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &668080509
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -271,7 +273,7 @@ PrefabInstance:
         type: 3}
       propertyPath: panel
       value: 
-      objectReference: {fileID: 631892208}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78feac9053ddfea438b19bfab2d780bb, type: 3}
 --- !u!1001 &1073278060
@@ -284,6 +286,11 @@ PrefabInstance:
     - target: {fileID: 1117797343235124, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd, type: 3}
       propertyPath: m_Name
       value: Main
+      objectReference: {fileID: 0}
+    - target: {fileID: 114996525408164984, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
+        type: 3}
+      propertyPath: nxtstage
+      value: l3-2
       objectReference: {fileID: 0}
     - target: {fileID: 4641479379229148, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -339,21 +346,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: l3-2
       objectReference: {fileID: 0}
-    - target: {fileID: 224404248604975774, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224404248604975774, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7754067320903312956, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
-        type: 3}
-      propertyPath: m_Text
-      value: Level 3 Stage 1
-      objectReference: {fileID: 0}
+    - target: {fileID: 920143206, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd, type: 3}
+      propertyPath: next
+      value: 
+      objectReference: {fileID: 8300000, guid: cabfae866cab347928b74b7d0ca6bfa9, type: 3}
     - target: {fileID: 7861447854040904674, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
         type: 3}
       propertyPath: m_PlayOnAwake
@@ -362,7 +358,7 @@ PrefabInstance:
     - target: {fileID: 7861447854040904674, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
         type: 3}
       propertyPath: m_Volume
-      value: 0.25
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7861447854040904674, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
         type: 3}
@@ -384,14 +380,20 @@ PrefabInstance:
       propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 920143206, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd, type: 3}
-      propertyPath: next
-      value: 
-      objectReference: {fileID: 8300000, guid: cabfae866cab347928b74b7d0ca6bfa9, type: 3}
-    - target: {fileID: 114996525408164984, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
+    - target: {fileID: 6046447854180596401, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
         type: 3}
-      propertyPath: nxtstage
-      value: l3-2
+      propertyPath: m_AnchoredPosition.x
+      value: 2.9000244
+      objectReference: {fileID: 0}
+    - target: {fileID: 2329499666004654577, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 2.9000244
+      objectReference: {fileID: 0}
+    - target: {fileID: 2940098533960586128, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 2.9000244
       objectReference: {fileID: 0}
     - target: {fileID: 965458553, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd, type: 3}
       propertyPath: m_audioClip
@@ -401,6 +403,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224404248604975774, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224404248604975774, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7754067320903312956, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
+        type: 3}
+      propertyPath: m_Text
+      value: Level 3 Stage 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd, type: 3}
@@ -473,7 +490,7 @@ PrefabInstance:
         type: 3}
       propertyPath: panel
       value: 
-      objectReference: {fileID: 631892208}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78feac9053ddfea438b19bfab2d780bb, type: 3}
 --- !u!114 &2086329306 stripped

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DragwithMouse : MonoBehaviour {
     bool clicked = false;
+    public bool draging = false;
     RectTransform panel;
     public static bool cutoff=false;
     //public static bool takemouseinput=true;
@@ -23,9 +24,11 @@ public class DragwithMouse : MonoBehaviour {
     {
         cutoff=false;
         clicked = true;
+        draging = false;
     }
     private void OnMouseDrag()
     {
+        draging = true;
         if (!clicked)
         {
             StartCoroutine(pop());

@@ -11,6 +11,8 @@ public class warning : MonoBehaviour {
     public Transform parent;
     bool movetowards = false;
     Transform target;
+    AudioSource beeping;
+    DragwithMouse dwm;
 
     private void Start()
     {
@@ -18,6 +20,8 @@ public class warning : MonoBehaviour {
         //other = GetComponent<SpriteRenderer>();
         other = GetComponentInParent<SpriteRenderer>();
         no = GetComponentInParent<randomColor>().Set_Option;
+        beeping = GetComponent<AudioSource>();
+        dwm = GetComponentInParent<DragwithMouse>();
     }
     private void Update()
     {
@@ -30,8 +34,10 @@ public class warning : MonoBehaviour {
     {
         if(collision.transform.tag == "EnemyB" || collision.transform.tag == "Spike")
         {
-            InvokeRepeating("trigger", 0.1f, 0.5f);
+            InvokeRepeating("trigger", 0.2f, 0.2f);
             //InvokeRepeating("triggerframe", 0.1f, 0.5f);
+            if(!dwm.draging)
+                beeping.Play();
         }
         if (collision.transform.tag == "EnemyA")
         {
@@ -39,7 +45,9 @@ public class warning : MonoBehaviour {
             if (!(no == colno))
             {
                 //Debug.Log("not same color");
-                InvokeRepeating("trigger", 0.1f, 0.5f);
+                InvokeRepeating("trigger", 0.2f, 0.2f);
+                if (!dwm.draging)
+                    beeping.Play();
                 //InvokeRepeating("triggerframe", 0.1f, 0.5f);
             }
             else
@@ -77,6 +85,7 @@ public class warning : MonoBehaviour {
     private void OnTriggerExit2D(Collider2D collision)
     {
         CancelInvoke();
+        beeping.Stop();
     }
 
     void trigger()
@@ -92,7 +101,7 @@ public class warning : MonoBehaviour {
     IEnumerator flash()
     {
         Color colour = other.color;
-        colour.a = 0.5f;
+        colour.a = 0.85f;
         other.color = colour;
         yield return new WaitForSeconds(0.3f);
         colour.a = 0f;
