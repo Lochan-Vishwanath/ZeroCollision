@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class loadlevel : MonoBehaviour {
 
+    public Text Restarttxt;
     RectTransform nextLevelMenu;
     Scene thisScene;
     char[] lvlname = "l0-0".ToCharArray();
@@ -47,7 +49,7 @@ public class loadlevel : MonoBehaviour {
         newlvlname[3] = '1';
         //Debug.Log(newlvlname.ToString());
         SceneManager.LoadScene(new string(newlvlname), LoadSceneMode.Single);*/
-        SceneManager.LoadScene(lvlname[0].ToString() + lvlname[1].ToString() + lvlname[2].ToString() + ('1').ToString(), LoadSceneMode.Single);
+        SceneManager.LoadScene(lvlname[0].ToString() + lvlname[1].ToString() + lvlname[2].ToString() + lvlname[3].ToString() + lvlname[4].ToString() + ('1').ToString(), LoadSceneMode.Single);
     }
     public void nextStage()
     {
@@ -94,5 +96,21 @@ public class loadlevel : MonoBehaviour {
         }
         else
             SceneManager.LoadScene("Main", LoadSceneMode.Single);
+    }
+    public void AutoRestart()
+    {
+        StartCoroutine("autoTimer");
+    }
+
+    IEnumerator autoTimer()
+    {
+        Restarttxt.text = "3";
+        yield return new WaitForSeconds(1);
+        Restarttxt.text = "2";
+        yield return new WaitForSeconds(2);
+        Restarttxt.text = "1";
+        yield return new WaitForSeconds(3);
+        Restarttxt.text = "1";
+        resetToLevelHead();
     }
 }
