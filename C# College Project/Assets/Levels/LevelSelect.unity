@@ -320,7 +320,7 @@ PrefabInstance:
     - target: {fileID: 8885906813024658277, guid: 11371589028315742a2bb93708d33b30,
         type: 3}
       propertyPath: m_Text
-      value: Level 3
+      value: Walking
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11371589028315742a2bb93708d33b30, type: 3}
@@ -455,7 +455,7 @@ PrefabInstance:
     - target: {fileID: 8885906813024658277, guid: 11371589028315742a2bb93708d33b30,
         type: 3}
       propertyPath: m_Text
-      value: Level 2
+      value: Second Step
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11371589028315742a2bb93708d33b30, type: 3}
@@ -495,6 +495,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b177d2c333ff944e99e76ae4ea474a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Restarttxt: {fileID: 0}
 --- !u!4 &302371556
 Transform:
   m_ObjectHideFlags: 0
@@ -1444,7 +1445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.09019608, g: 0.627451, b: 0.3647059, a: 1}
+  m_Color: {r: 0.8627451, g: 0.8627451, b: 0.8627451, a: 1}
   m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1452,8 +1453,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 209
+    m_Font: {fileID: 12800000, guid: 678d6429d5d434146860ecc623f1cff1, type: 3}
+    m_FontSize: 148
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -1618,6 +1619,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: l01-01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8885906813024658277, guid: 11371589028315742a2bb93708d33b30,
+        type: 3}
+      propertyPath: m_Text
+      value: First Step
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11371589028315742a2bb93708d33b30, type: 3}

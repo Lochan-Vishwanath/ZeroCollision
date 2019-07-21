@@ -25,6 +25,8 @@ public class warning : MonoBehaviour {
     }
     private void Update()
     {
+        if (ColoursScript.GameOver)
+            beeping.Stop();
         if (movetowards)
         {
             parent.position = Vector2.MoveTowards(parent.position, target.position, 10 * Time.deltaTime);
@@ -36,7 +38,7 @@ public class warning : MonoBehaviour {
         {
             InvokeRepeating("trigger", 0.2f, 0.2f);
             //InvokeRepeating("triggerframe", 0.1f, 0.5f);
-            if(!dwm.draging)
+            if(!dwm.draging )
                 beeping.Play();
         }
         if (collision.transform.tag == "EnemyA")
@@ -46,7 +48,7 @@ public class warning : MonoBehaviour {
             {
                 //Debug.Log("not same color");
                 InvokeRepeating("trigger", 0.2f, 0.2f);
-                if (!dwm.draging)
+                if (!dwm.draging )
                     beeping.Play();
                 //InvokeRepeating("triggerframe", 0.1f, 0.5f);
             }
