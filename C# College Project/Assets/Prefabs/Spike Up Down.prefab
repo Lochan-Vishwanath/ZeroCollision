@@ -202,6 +202,8 @@ GameObject:
   - component: {fileID: 340329972171546023}
   - component: {fileID: 340329972171546025}
   - component: {fileID: 340329972171546022}
+  - component: {fileID: 495324634445413032}
+  - component: {fileID: 265854789202486316}
   m_Layer: 0
   m_Name: espike transperent
   m_TagString: Spike
@@ -287,7 +289,36 @@ MonoBehaviour:
   destination1: {fileID: 340329971760915272}
   destination2: {fileID: 340329970443901493}
   speed: 0.06
-  ParticleEffectOBJ: {fileID: 0}
+  ParticleEffectOBJ: {fileID: 4769258715521532665, guid: cd30e62537734df4e8743485d8846fce,
+    type: 3}
+--- !u!114 &495324634445413032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340329972171546020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22199dd94ae23d44595658cb981be2a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!58 &265854789202486316
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340329972171546020}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 3.57
 --- !u!1 &8380558605920636369
 GameObject:
   m_ObjectHideFlags: 0
@@ -314,7 +345,7 @@ Transform:
   m_GameObject: {fileID: 8380558605920636369}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 26, y: 26, z: 1}
+  m_LocalScale: {x: 26.5, y: 26.5, z: 1}
   m_Children: []
   m_Father: {fileID: 340329972171546023}
   m_RootOrder: 0
@@ -355,7 +386,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 7c045d1d377fcec4887973321e145016, type: 3}
   m_Color: {r: 0.93725497, g: 0.10196079, b: 0.14117648, a: 1}
   m_FlipX: 0
