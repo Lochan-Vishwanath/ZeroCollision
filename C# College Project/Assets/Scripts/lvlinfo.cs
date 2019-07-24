@@ -13,7 +13,8 @@ public class lvlinfo : MonoBehaviour
     {
         thisscene = SceneManager.GetActiveScene();
         char[] SceneName = thisscene.name.ToCharArray();
-        mytxt.text = "Level " + SceneName[1] + " Stage " + SceneName[3];
+        //mytxt.text = "Level " + SceneName[1] + " Stage " + SceneName[3];
+        mytxt.text = "Level " + SceneName[1]+SceneName[2] + " Stage " + SceneName[4]+SceneName[5];
         StartCoroutine(Pause(2));
     }
     private IEnumerator Pause(int p)

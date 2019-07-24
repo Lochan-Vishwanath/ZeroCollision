@@ -117,7 +117,7 @@ MonoBehaviour:
   - {fileID: 4407152305643574881, guid: 0932732a781d9d54f9e6403826542422, type: 3}
   - {fileID: 3523100245762923727, guid: e3e739ed4504ce049ae84319f756eb98, type: 3}
   prefab: {fileID: 4704668943749448, guid: bca5f16fb7b5b1b4488de0b570cab22b, type: 3}
-  speed: 0.55
+  speed: 0
   ParticleEffectOBJ: {fileID: 4769258715521532665, guid: cd30e62537734df4e8743485d8846fce,
     type: 3}
   au: {fileID: 920143206, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd, type: 3}
