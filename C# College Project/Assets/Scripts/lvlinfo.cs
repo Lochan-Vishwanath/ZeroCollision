@@ -24,7 +24,7 @@ public class lvlinfo : MonoBehaviour
             scenesInBuild.Add(scenePath.Substring(lastSlash + 1, scenePath.LastIndexOf(".") - lastSlash - 1));
         }
         for(int j=0;j<scenesInBuild.Count;j++)
-        Debug.Log(scenesInBuild[j]);
+        //Debug.Log(scenesInBuild[j]);
         if (scenesInBuild.Contains(SceneName[0].ToString() + SceneName[1].ToString() + SceneName[2].ToString() +SceneName[3].ToString()+ 10))
             //Debug.Log("here1");
         mytxt.text = "Stage " + SceneName[4] + SceneName[5] + "/" + 10;

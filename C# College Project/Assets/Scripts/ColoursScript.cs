@@ -90,7 +90,8 @@ public class ColoursScript : MonoBehaviour {
 
     IEnumerator waitNextStage()
     {
-        yield return new WaitForSeconds(0.25f + 1);
+        yield return new WaitForSeconds(0.15f);
+        //yield return null;
         x.nextStage();
     }
     IEnumerator waitGameOver()
