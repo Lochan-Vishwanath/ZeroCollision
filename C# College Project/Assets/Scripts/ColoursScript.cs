@@ -75,10 +75,10 @@ public class ColoursScript : MonoBehaviour {
     }
 
      void OnDrawGizmos(){
-        Vector3 RandPosition1 = Camera.main.ViewportToWorldPoint(new Vector3(0.1f, 0.14f , Camera.main.farClipPlane / 2));
-        Vector3 RandPosition2 = Camera.main.ViewportToWorldPoint(new Vector3(0.86f, 0.14f , Camera.main.farClipPlane / 2));
-        Vector3 RandPosition3 = Camera.main.ViewportToWorldPoint(new Vector3(0.1f, 0.82f , Camera.main.farClipPlane / 2));
-        Vector3 RandPosition4 = Camera.main.ViewportToWorldPoint(new Vector3(0.86f, 0.82f , Camera.main.farClipPlane / 2));
+        Vector3 RandPosition1 = Camera.main.ViewportToWorldPoint(new Vector3(0.1f, 0.12f , Camera.main.farClipPlane / 2));
+        Vector3 RandPosition2 = Camera.main.ViewportToWorldPoint(new Vector3(0.86f, 0.12f , Camera.main.farClipPlane / 2));
+        Vector3 RandPosition3 = Camera.main.ViewportToWorldPoint(new Vector3(0.1f, 0.88f , Camera.main.farClipPlane / 2));
+        Vector3 RandPosition4 = Camera.main.ViewportToWorldPoint(new Vector3(0.86f, 0.88f , Camera.main.farClipPlane / 2));
 
 
         Gizmos.color = Color.yellow;

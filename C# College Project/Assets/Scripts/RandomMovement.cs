@@ -46,19 +46,19 @@ public class RandomMovement : MonoBehaviour {
         switch (randnum)
         {
             case 1:
-                RandPosition = Camera.main.ViewportToWorldPoint(new Vector3(0.1f, Random.Range(0.14f,0.82f), Camera.main.farClipPlane / 2));
+                RandPosition = Camera.main.ViewportToWorldPoint(new Vector3(0.1f, Random.Range(0.12f,0.88f), Camera.main.farClipPlane / 2));
                 //RandPosition = Camera.main.ScreenToWorldPoint(new Vector3(30, Random.Range(90, Screen.height - 90), Camera.main.farClipPlane / 2));
                 break;
             case 2:
-                RandPosition = Camera.main.ViewportToWorldPoint(new Vector3(0.86f, Random.Range(0.14f, 0.82f), Camera.main.farClipPlane / 2));
+                RandPosition = Camera.main.ViewportToWorldPoint(new Vector3(0.86f, Random.Range(0.12f, 0.88f), Camera.main.farClipPlane / 2));
                 //RandPosition = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width - 30, Random.Range(90, Screen.height - 90), Camera.main.farClipPlane / 2));
                 break;
             case 3:
-                RandPosition = Camera.main.ViewportToWorldPoint(new Vector3(Random.Range(0.1f, 0.86f), 0.14f , Camera.main.farClipPlane / 2));
+                RandPosition = Camera.main.ViewportToWorldPoint(new Vector3(Random.Range(0.1f, 0.86f), 0.12f , Camera.main.farClipPlane / 2));//14 16:9
                 //RandPosition = Camera.main.ScreenToWorldPoint(new Vector3(Random.Range(30, Screen.width - 30), Screen.height - 90, Camera.main.farClipPlane / 2));
                 break;
             case 4:
-                RandPosition = Camera.main.ViewportToWorldPoint(new Vector3(Random.Range(0.1f, 0.86f), 0.82f, Camera.main.farClipPlane / 2));
+                RandPosition = Camera.main.ViewportToWorldPoint(new Vector3(Random.Range(0.1f, 0.86f), 0.88f, Camera.main.farClipPlane / 2));//82 16:9
                 //RandPosition = Camera.main.ScreenToWorldPoint(new Vector3(Random.Range(30, Screen.width - 30), 90, Camera.main.farClipPlane / 2));
                 break;
         }
