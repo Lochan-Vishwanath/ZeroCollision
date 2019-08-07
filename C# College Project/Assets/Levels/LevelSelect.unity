@@ -320,7 +320,7 @@ PrefabInstance:
     - target: {fileID: 8885906813024658277, guid: 11371589028315742a2bb93708d33b30,
         type: 3}
       propertyPath: m_Text
-      value: Baby Steps 1
+      value: 3.Baby Steps 1
       objectReference: {fileID: 0}
     - target: {fileID: 8885906813564773181, guid: 11371589028315742a2bb93708d33b30,
         type: 3}
@@ -470,7 +470,7 @@ PrefabInstance:
     - target: {fileID: 8885906813024658277, guid: 11371589028315742a2bb93708d33b30,
         type: 3}
       propertyPath: m_Text
-      value: Crawling
+      value: 2.Crawling
       objectReference: {fileID: 0}
     - target: {fileID: 8885906813564773181, guid: 11371589028315742a2bb93708d33b30,
         type: 3}
@@ -885,7 +885,7 @@ PrefabInstance:
     - target: {fileID: 8885906813024658277, guid: 11371589028315742a2bb93708d33b30,
         type: 3}
       propertyPath: m_Text
-      value: Running
+      value: 7.Running
       objectReference: {fileID: 0}
     - target: {fileID: 8885906813564773181, guid: 11371589028315742a2bb93708d33b30,
         type: 3}
@@ -1071,7 +1071,7 @@ PrefabInstance:
     - target: {fileID: 8885906813024658277, guid: 11371589028315742a2bb93708d33b30,
         type: 3}
       propertyPath: m_Text
-      value: Jogging
+      value: 6.Jogging
       objectReference: {fileID: 0}
     - target: {fileID: 8885906813564773181, guid: 11371589028315742a2bb93708d33b30,
         type: 3}
@@ -1239,7 +1239,7 @@ PrefabInstance:
     - target: {fileID: 8885906813024658277, guid: 11371589028315742a2bb93708d33b30,
         type: 3}
       propertyPath: m_Text
-      value: The Olympics
+      value: 10.The Olympics
       objectReference: {fileID: 0}
     - target: {fileID: 8885906813564773181, guid: 11371589028315742a2bb93708d33b30,
         type: 3}
@@ -1401,7 +1401,7 @@ PrefabInstance:
     - target: {fileID: 8885906813024658277, guid: 11371589028315742a2bb93708d33b30,
         type: 3}
       propertyPath: m_Text
-      value: Baby Steps 2
+      value: 4.Baby Steps 2
       objectReference: {fileID: 0}
     - target: {fileID: 8885906813564773181, guid: 11371589028315742a2bb93708d33b30,
         type: 3}
@@ -1651,7 +1651,7 @@ PrefabInstance:
     - target: {fileID: 8885906813024658277, guid: 11371589028315742a2bb93708d33b30,
         type: 3}
       propertyPath: m_Text
-      value: 400 Meters Race
+      value: 8.400 Meters Race
       objectReference: {fileID: 0}
     - target: {fileID: 8885906813564773181, guid: 11371589028315742a2bb93708d33b30,
         type: 3}
@@ -1878,7 +1878,7 @@ PrefabInstance:
     - target: {fileID: 8885906813024658277, guid: 11371589028315742a2bb93708d33b30,
         type: 3}
       propertyPath: m_Text
-      value: 1500 Meters Race
+      value: 9.1500 Meters Race
       objectReference: {fileID: 0}
     - target: {fileID: 8885906813564773181, guid: 11371589028315742a2bb93708d33b30,
         type: 3}
@@ -2022,7 +2022,7 @@ PrefabInstance:
     - target: {fileID: 8885906813024658277, guid: 11371589028315742a2bb93708d33b30,
         type: 3}
       propertyPath: m_Text
-      value: Walking
+      value: 5.Walking
       objectReference: {fileID: 0}
     - target: {fileID: 8885906813564773181, guid: 11371589028315742a2bb93708d33b30,
         type: 3}
@@ -2374,7 +2374,7 @@ PrefabInstance:
     - target: {fileID: 8885906813024658277, guid: 11371589028315742a2bb93708d33b30,
         type: 3}
       propertyPath: m_Text
-      value: New Born
+      value: 1.New Born
       objectReference: {fileID: 0}
     - target: {fileID: 8885906813564773181, guid: 11371589028315742a2bb93708d33b30,
         type: 3}

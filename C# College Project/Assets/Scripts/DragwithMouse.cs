@@ -7,9 +7,12 @@ public class DragwithMouse : MonoBehaviour {
     public bool draging = false;
     RectTransform panel;
     public static bool cutoff=false;
+    Vector3 originalscale;
     //public static bool takemouseinput=true;
     void Start(){
         panel = GameObject.Find("Main/Canvas/Game-Over Menu").GetComponent<RectTransform>();
+        originalscale = transform.localScale;
+        Debug.Log(originalscale);
         //takemouseinput=true;
     }
 //    void LateUpdate(){
@@ -44,11 +47,12 @@ public class DragwithMouse : MonoBehaviour {
 
         foreach (GameObject obj in objs)
         {
+            
             if (obj != gameObject && obj.GetComponent<randomColor>().Set_Option == GetComponent<randomColor>().Set_Option)
             {
-                Vector3 originalscale = obj.transform.localScale;
+                //Vector3 originalscale = obj.transform.localScale;
                 /* if clicked countinously the size of the object grows*/
-                obj.transform.localScale *= 1.1f;
+                obj.transform.localScale += new Vector3(1.1f,1.1f,0);
                 yield return new WaitForSeconds(0.3f);
                 obj.transform.localScale = originalscale;
             }
