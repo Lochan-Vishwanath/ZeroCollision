@@ -18,7 +18,7 @@ public class portalMovement : MonoBehaviour
             case 5: x = 0; y = -0.5f; break;
             case 6: x = -0.5f; y =-0.5f ; break;
             case 7: x = -0.5f; y =0 ; break;
-            case 8: x = -0.5f; y =0 ; break;
+            case 8: x = -0.5f; y =0.5f ; break;
             default: x = 0; y = 0; break;
         }
     }
