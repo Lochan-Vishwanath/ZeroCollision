@@ -52,7 +52,7 @@ public class DragwithMouse : MonoBehaviour {
             {
                 //Vector3 originalscale = obj.transform.localScale;
                 /* if clicked countinously the size of the object grows*/
-                obj.transform.localScale += new Vector3(1.1f,1.1f,0);
+                obj.transform.localScale += new Vector3(0.5f,0.5f,0);
                 yield return new WaitForSeconds(0.3f);
                 obj.transform.localScale = originalscale;
             }
