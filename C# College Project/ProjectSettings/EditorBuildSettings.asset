@@ -177,6 +177,9 @@ EditorBuildSettings:
     path: Assets/Levels/l09-07.unity
     guid: a1db24b6230be6e4a836e6173fe1baa0
   - enabled: 1
+    path: Assets/Levels/l09-08.unity
+    guid: a9c63d901819ef64fb9ab5b586231ade
+  - enabled: 1
     path: Assets/Levels/l09-09.unity
     guid: 5d5f14471d583754696989af7beafd73
   - enabled: 1

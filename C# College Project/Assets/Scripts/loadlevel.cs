@@ -13,9 +13,11 @@ public class loadlevel : MonoBehaviour {
     List<string> scenesInBuild = new List<string>();
     private void Start()
     {
+
         thisScene = SceneManager.GetActiveScene();
         lvlname = thisScene.name.ToCharArray();
-        if(string.Compare(thisScene.name,"LevelSelect")!=0)
+        Debug.Log(lvlname[0].ToString() + lvlname[1].ToString() + lvlname[2].ToString() + lvlname[3].ToString() + lvlname[4].ToString() + ((lvlname[5] - '0' + 1)).ToString());
+        if (string.Compare(thisScene.name,"LevelSelect")!=0)
             if(GameObject.Find("Main/Canvas/Next Level Menu").GetComponent<RectTransform>()!=null)
                 nextLevelMenu = GameObject.Find("Main/Canvas/Next Level Menu").GetComponent<RectTransform>();
         
@@ -53,7 +55,7 @@ public class loadlevel : MonoBehaviour {
     }
     public void nextStage()
     {
-        if (lvlname[5] == '3' && !scenesInBuild.Contains(lvlname[0].ToString() + lvlname[1].ToString() + lvlname[2].ToString() + lvlname[3].ToString() +lvlname[4].ToString() + ((lvlname[5] - '0' + 1)).ToString()))
+        if (lvlname[5] == '3' && !scenesInBuild.Contains(lvlname[0].ToString() + lvlname[1].ToString() + lvlname[2].ToString() + lvlname[3].ToString() + lvlname[4].ToString() + ((lvlname[5] - '0' + 1)).ToString()))
         {
             nextLevelMenu.gameObject.SetActive(true);
         }
@@ -77,9 +79,12 @@ public class loadlevel : MonoBehaviour {
         else if (scenesInBuild.Contains(lvlname[0].ToString() + lvlname[1].ToString() + lvlname[2].ToString() + lvlname[3].ToString() + lvlname[4].ToString() + ((lvlname[5] - '0' + 1)).ToString()))
         {
             SceneManager.LoadScene(lvlname[0].ToString() + lvlname[1].ToString() + lvlname[2].ToString() + lvlname[3].ToString() + lvlname[4].ToString() + ((lvlname[5] - '0' + 1)).ToString(), LoadSceneMode.Single);
-        }  
+        }
         else
-            SceneManager.LoadScene("Main",LoadSceneMode.Single);
+        {
+            
+            SceneManager.LoadScene("Main", LoadSceneMode.Single);
+        }
     }
     public void nextLevel()
     {

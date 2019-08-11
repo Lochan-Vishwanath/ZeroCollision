@@ -12,7 +12,7 @@ public class DragwithMouse : MonoBehaviour {
     void Start(){
         panel = GameObject.Find("Main/Canvas/Game-Over Menu").GetComponent<RectTransform>();
         originalscale = transform.localScale;
-        Debug.Log(originalscale);
+        //Debug.Log(originalscale);
         //takemouseinput=true;
     }
 //    void LateUpdate(){
