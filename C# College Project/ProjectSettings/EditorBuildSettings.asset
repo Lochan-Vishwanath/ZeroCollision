@@ -177,12 +177,39 @@ EditorBuildSettings:
     path: Assets/Levels/l09-07.unity
     guid: a1db24b6230be6e4a836e6173fe1baa0
   - enabled: 1
-    path: Assets/Levels/l10-07.unity
-    guid: cfb3b962b9216dd418f7d149cf78ff21
-  - enabled: 1
     path: Assets/Levels/l09-09.unity
     guid: 5d5f14471d583754696989af7beafd73
   - enabled: 1
     path: Assets/Levels/l09-10.unity
     guid: 695cc83db5ff38c408ee03e9b53bfdce
+  - enabled: 1
+    path: Assets/Levels/l10-01.unity
+    guid: fd1d7d685a5797c4eaa89bf95d161332
+  - enabled: 1
+    path: Assets/Levels/l10-02.unity
+    guid: 8b4163d2137c5a8479c1b7da9da1ca1e
+  - enabled: 1
+    path: Assets/Levels/l10-03.unity
+    guid: 69fd5f6d28a28a44a953e97e95fae59a
+  - enabled: 1
+    path: Assets/Levels/l10-04.unity
+    guid: 9554af13baa9ace44bfe7068473d84d0
+  - enabled: 1
+    path: Assets/Levels/l10-05.unity
+    guid: 4e7141f05abc62b4d9d0e623f4488a62
+  - enabled: 1
+    path: Assets/Levels/l10-06.unity
+    guid: 4aa1bbf15cd530d48ad800560a18c37d
+  - enabled: 1
+    path: Assets/Levels/l10-07.unity
+    guid: cfb3b962b9216dd418f7d149cf78ff21
+  - enabled: 1
+    path: Assets/Levels/l10-08.unity
+    guid: 004f7586c0774e645a2619c6f5a870bc
+  - enabled: 1
+    path: Assets/Levels/l10-09.unity
+    guid: e447bb5e6fdcfb44fa75710925521fe4
+  - enabled: 1
+    path: Assets/Levels/l10-10.unity
+    guid: 355e68f26e856f14da665333c7c21c8b
   m_configObjects: {}
