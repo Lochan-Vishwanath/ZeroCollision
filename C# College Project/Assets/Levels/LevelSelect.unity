@@ -552,6 +552,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c48f259235322cf4f9cb57339ef900c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DEVELOPER_BUILD: 1
   Levels:
   - {fileID: 698654597}
   - {fileID: 1211570240}
@@ -1651,7 +1652,7 @@ PrefabInstance:
     - target: {fileID: 8885906813024658277, guid: 11371589028315742a2bb93708d33b30,
         type: 3}
       propertyPath: m_Text
-      value: 8.400 Meters Race
+      value: 8.Hurdles 1
       objectReference: {fileID: 0}
     - target: {fileID: 8885906813564773181, guid: 11371589028315742a2bb93708d33b30,
         type: 3}
@@ -1878,7 +1879,7 @@ PrefabInstance:
     - target: {fileID: 8885906813024658277, guid: 11371589028315742a2bb93708d33b30,
         type: 3}
       propertyPath: m_Text
-      value: 9.1500 Meters Race
+      value: 9.Hurdles 2
       objectReference: {fileID: 0}
     - target: {fileID: 8885906813564773181, guid: 11371589028315742a2bb93708d33b30,
         type: 3}

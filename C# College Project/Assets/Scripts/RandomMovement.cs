@@ -23,7 +23,7 @@ public class RandomMovement : MonoBehaviour {
 
 	void Start () {
         //RippleEffectOBJ = GameObject.Find("Main/Main Camera").GetComponent<RippleEffect>();
-        
+        notPaused = true;
         ss = Camera.main.GetComponent<ScreenShake>();
 		Spawnobj();
         objs = GameObject.FindGameObjectsWithTag("EnemyA");
