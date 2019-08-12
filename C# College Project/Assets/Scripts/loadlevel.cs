@@ -16,7 +16,7 @@ public class loadlevel : MonoBehaviour {
 
         thisScene = SceneManager.GetActiveScene();
         lvlname = thisScene.name.ToCharArray();
-        Debug.Log(lvlname[0].ToString() + lvlname[1].ToString() + lvlname[2].ToString() + lvlname[3].ToString() + lvlname[4].ToString() + ((lvlname[5] - '0' + 1)).ToString());
+        //Debug.Log(lvlname[0].ToString() + lvlname[1].ToString() + lvlname[2].ToString() + lvlname[3].ToString() + lvlname[4].ToString() + ((lvlname[5] - '0' + 1)).ToString());
         if (string.Compare(thisScene.name,"LevelSelect")!=0)
             if(GameObject.Find("Main/Canvas/Next Level Menu").GetComponent<RectTransform>()!=null)
                 nextLevelMenu = GameObject.Find("Main/Canvas/Next Level Menu").GetComponent<RectTransform>();
@@ -67,7 +67,7 @@ public class loadlevel : MonoBehaviour {
         {
             nextLevelMenu.gameObject.SetActive(true);
         }
-        else if (lvlname[4] == '1' && lvlname[5] == '0' && !scenesInBuild.Contains(lvlname[0].ToString() + lvlname[1].ToString() + lvlname[2].ToString() + lvlname[3].ToString() + lvlname[4].ToString() + ((lvlname[5] - '0' + 1)).ToString()))
+        else if (lvlname[4] == '1' && lvlname[5] == '0' && !scenesInBuild.Contains(lvlname[0].ToString() + lvlname[1].ToString() + lvlname[2].ToString() + lvlname[3].ToString() + ((lvlname[5] - '0' + 1)).ToString()))
         {
             nextLevelMenu.gameObject.SetActive(true);
         }
@@ -76,14 +76,25 @@ public class loadlevel : MonoBehaviour {
             nextLevelMenu.gameObject.SetActive(true);
         }*/
 
-        else if (scenesInBuild.Contains(lvlname[0].ToString() + lvlname[1].ToString() + lvlname[2].ToString() + lvlname[3].ToString() + lvlname[4].ToString() + ((lvlname[5] - '0' + 1)).ToString()))
-        {
-            SceneManager.LoadScene(lvlname[0].ToString() + lvlname[1].ToString() + lvlname[2].ToString() + lvlname[3].ToString() + lvlname[4].ToString() + ((lvlname[5] - '0' + 1)).ToString(), LoadSceneMode.Single);
-        }
         else
         {
-            
-            SceneManager.LoadScene("Main", LoadSceneMode.Single);
+
+            if (scenesInBuild.Contains(lvlname[0].ToString() + lvlname[1].ToString() + lvlname[2].ToString() + lvlname[3].ToString() + lvlname[4].ToString() + ((lvlname[5] - '0' + 1)).ToString()))
+            {
+                SceneManager.LoadScene(lvlname[0].ToString() + lvlname[1].ToString() + lvlname[2].ToString() + lvlname[3].ToString() + lvlname[4].ToString() + ((lvlname[5] - '0' + 1)).ToString(), LoadSceneMode.Single);
+            }
+            else
+            {
+                int a = lvlname[5] - '0' + 1;
+                if (a > 9)
+                {
+                    //lvlname[4] = (char)(a / 10);
+                    //lvlname[5] = (char)(a % 10);
+                    SceneManager.LoadScene(lvlname[0].ToString() + lvlname[1].ToString() + lvlname[2].ToString() + lvlname[3].ToString() + (a / 10).ToString() + (a % 10).ToString(), LoadSceneMode.Single);
+                }
+                else
+                SceneManager.LoadScene("Main", LoadSceneMode.Single);
+            }
         }
     }
     public void nextLevel()
