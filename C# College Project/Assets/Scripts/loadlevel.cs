@@ -10,23 +10,39 @@ public class loadlevel : MonoBehaviour {
     RectTransform nextLevelMenu;
     Scene thisScene;
     char[] lvlname = "l0-0".ToCharArray();
+    string _nextlevel, _nextstage;
     List<string> scenesInBuild = new List<string>();
     private void Start()
     {
-
         thisScene = SceneManager.GetActiveScene();
         lvlname = thisScene.name.ToCharArray();
         //Debug.Log(lvlname[0].ToString() + lvlname[1].ToString() + lvlname[2].ToString() + lvlname[3].ToString() + lvlname[4].ToString() + ((lvlname[5] - '0' + 1)).ToString());
+        
         if (string.Compare(thisScene.name,"LevelSelect")!=0)
             if(GameObject.Find("Main/Canvas/Next Level Menu").GetComponent<RectTransform>()!=null)
                 nextLevelMenu = GameObject.Find("Main/Canvas/Next Level Menu").GetComponent<RectTransform>();
-        
+        //nextLevel();
         for (int i = 1; i < SceneManager.sceneCountInBuildSettings; i++)
         {
             string scenePath = SceneUtility.GetScenePathByBuildIndex(i);
             int lastSlash = scenePath.LastIndexOf("/");
             scenesInBuild.Add(scenePath.Substring(lastSlash + 1, scenePath.LastIndexOf(".") - lastSlash - 1));
         }
+        //nextLevel();
+        
+        int stage, level;
+        level = int.Parse((lvlname[1] - '0').ToString() + (lvlname[2] - '0').ToString()) + 1;
+        stage = int.Parse((lvlname[4] - '0').ToString() + (lvlname[5] - '0').ToString()) + 1;
+        if (level >= 10)
+            _nextlevel = ('l').ToString() + (int.Parse((lvlname[1] - '0').ToString() + (lvlname[2] - '0').ToString()) + 1).ToString() + "-01";
+        else
+            _nextlevel = ('l').ToString() + ('0').ToString() + (int.Parse((lvlname[1] - '0').ToString() + (lvlname[2] - '0').ToString()) + 1).ToString() + "-01";
+
+        if (stage >= 10)
+            _nextstage = ('l').ToString() + lvlname[1].ToString() + lvlname[2].ToString() + lvlname[3].ToString() + (int.Parse((lvlname[4] - '0').ToString() + (lvlname[5] - '0').ToString()) + 1).ToString();
+        else
+            _nextstage = ('l').ToString() + lvlname[1].ToString() + lvlname[2].ToString() + lvlname[3].ToString() + ('0').ToString() + (int.Parse((lvlname[4] - '0').ToString() + (lvlname[5] - '0').ToString()) + 1).ToString();
+        Debug.Log(_nextstage+" "+_nextlevel);
     }
     public void loadlvl(string lvlName)
     {
@@ -53,80 +69,117 @@ public class loadlevel : MonoBehaviour {
         SceneManager.LoadScene(new string(newlvlname), LoadSceneMode.Single);*/
         SceneManager.LoadScene(lvlname[0].ToString() + lvlname[1].ToString() + lvlname[2].ToString() + lvlname[3].ToString() + lvlname[4].ToString() + ('1').ToString(), LoadSceneMode.Single);
     }
+
+    
+
+    
     public void nextStage()
     {
-        if (lvlname[5] == '3' && !scenesInBuild.Contains(lvlname[0].ToString() + lvlname[1].ToString() + lvlname[2].ToString() + lvlname[3].ToString() + lvlname[4].ToString() + ((lvlname[5] - '0' + 1)).ToString()))
-        {
-            nextLevelMenu.gameObject.SetActive(true);
-        }
-        else if (lvlname[5] == '5' && !scenesInBuild.Contains(lvlname[0].ToString() + lvlname[1].ToString() + lvlname[2].ToString() + lvlname[3].ToString() + lvlname[4].ToString() + ((lvlname[5] - '0' + 1)).ToString()))
-        {
-            nextLevelMenu.gameObject.SetActive(true);
-        }
-        else if (lvlname[5] == '7' && !scenesInBuild.Contains(lvlname[0].ToString() + lvlname[1].ToString() + lvlname[2].ToString() + lvlname[3].ToString() + lvlname[4].ToString() + ((lvlname[5] - '0' + 1)).ToString()))
-        {
-            nextLevelMenu.gameObject.SetActive(true);
-        }
-        else if (lvlname[4] == '1' && lvlname[5] == '0' && !scenesInBuild.Contains(lvlname[0].ToString() + lvlname[1].ToString() + lvlname[2].ToString() + lvlname[3].ToString() + ((lvlname[5] - '0' + 1)).ToString()))
-        {
-            nextLevelMenu.gameObject.SetActive(true);
-        }
-        /*if (lvlname[4] == '1' && lvlname[5] == '0' && !scenesInBuild.Contains(lvlname[0].ToString() + lvlname[1].ToString() + lvlname[2].ToString() + lvlname[3].ToString() + lvlname[4].ToString() + ((lvlname[5] - '0' + 1)).ToString()))
-        {
-            nextLevelMenu.gameObject.SetActive(true);
-        }*/
+        Debug.Log(scenesInBuild.Contains(lvlname[0].ToString() + lvlname[1].ToString() + lvlname[2].ToString() + lvlname[3].ToString() + lvlname[4].ToString() + ((lvlname[5] - '0' + 1)).ToString()) +" " + lvlname[0].ToString() + lvlname[1].ToString() + lvlname[2].ToString() + lvlname[3].ToString() + lvlname[4].ToString() + ((lvlname[5] - '0' + 1)).ToString());
 
+        if (scenesInBuild.Contains(_nextstage))
+        {
+            Debug.Log("yes1");
+            SceneManager.LoadScene(_nextstage, LoadSceneMode.Single);
+        }
         else
         {
-
-            if (scenesInBuild.Contains(lvlname[0].ToString() + lvlname[1].ToString() + lvlname[2].ToString() + lvlname[3].ToString() + lvlname[4].ToString() + ((lvlname[5] - '0' + 1)).ToString()))
-            {
-                SceneManager.LoadScene(lvlname[0].ToString() + lvlname[1].ToString() + lvlname[2].ToString() + lvlname[3].ToString() + lvlname[4].ToString() + ((lvlname[5] - '0' + 1)).ToString(), LoadSceneMode.Single);
-            }
-            else
-            {
-                int a = lvlname[5] - '0' + 1;
-                if (a > 9)
-                {
-                    //lvlname[4] = (char)(a / 10);
-                    //lvlname[5] = (char)(a % 10);
-                    SceneManager.LoadScene(lvlname[0].ToString() + lvlname[1].ToString() + lvlname[2].ToString() + lvlname[3].ToString() + (a / 10).ToString() + (a % 10).ToString(), LoadSceneMode.Single);
-                }
-                else
-                SceneManager.LoadScene("Main", LoadSceneMode.Single);
-            }
+            Debug.Log("yes2");
+            nextLevelMenu.gameObject.SetActive(true);
         }
+
+        /* if (lvlname[5] == '3' && !scenesInBuild.Contains(lvlname[0].ToString() + lvlname[1].ToString() + lvlname[2].ToString() + lvlname[3].ToString() + lvlname[4].ToString() + ((lvlname[5] - '0' + 1)).ToString()))
+         {
+             nextLevelMenu.gameObject.SetActive(true);
+         }
+         else if (lvlname[5] == '5' && !scenesInBuild.Contains(lvlname[0].ToString() + lvlname[1].ToString() + lvlname[2].ToString() + lvlname[3].ToString() + lvlname[4].ToString() + ((lvlname[5] - '0' + 1)).ToString()))
+         {
+             nextLevelMenu.gameObject.SetActive(true);
+         }
+         else if (lvlname[5] == '7' && !scenesInBuild.Contains(lvlname[0].ToString() + lvlname[1].ToString() + lvlname[2].ToString() + lvlname[3].ToString() + lvlname[4].ToString() + ((lvlname[5] - '0' + 1)).ToString()))
+         {
+             nextLevelMenu.gameObject.SetActive(true);
+         }
+         else if (lvlname[4] == '1' && lvlname[5] == '0' && !scenesInBuild.Contains(lvlname[0].ToString() + lvlname[1].ToString() + lvlname[2].ToString() + lvlname[3].ToString() + lvlname[4].ToString()+((lvlname[5] - '0' + 1)).ToString()))
+         {
+             nextLevelMenu.gameObject.SetActive(true);
+         }
+         /*if (lvlname[4] == '1' && lvlname[5] == '0' && !scenesInBuild.Contains(lvlname[0].ToString() + lvlname[1].ToString() + lvlname[2].ToString() + lvlname[3].ToString() + lvlname[4].ToString() + ((lvlname[5] - '0' + 1)).ToString()))
+         {
+             nextLevelMenu.gameObject.SetActive(true);
+         }
+
+         else
+         {
+
+             if (scenesInBuild.Contains(lvlname[0].ToString() + lvlname[1].ToString() + lvlname[2].ToString() + lvlname[3].ToString() + lvlname[4].ToString() + ((lvlname[5] - '0' + 1)).ToString()))
+             {
+                 SceneManager.LoadScene(lvlname[0].ToString() + lvlname[1].ToString() + lvlname[2].ToString() + lvlname[3].ToString() + lvlname[4].ToString() + ((lvlname[5] - '0' + 1)).ToString(), LoadSceneMode.Single);
+             }
+             else
+             {
+                 int a = lvlname[5] - '0' + 1;
+                 if (a > 9)
+                 {
+                     //lvlname[4] = (char)(a / 10);
+                     //lvlname[5] = (char)(a % 10);
+                     SceneManager.LoadScene(lvlname[0].ToString() + lvlname[1].ToString() + lvlname[2].ToString() + lvlname[3].ToString() + (a / 10).ToString() + (a % 10).ToString(), LoadSceneMode.Single);
+                 }
+                 else
+                 SceneManager.LoadScene("Main", LoadSceneMode.Single);
+             }
+         }*/
     }
     public void nextLevel()
     {
-
-        if (lvlname[2].ToString() == "9" && scenesInBuild.Contains(lvlname[0].ToString() + lvlname[1].ToString() + ((lvlname[2] - '0' + 1)).ToString() + lvlname[3].ToString() + lvlname[4].ToString() + ('1').ToString()))
+        if (scenesInBuild.Contains(_nextlevel))
         {
-            SceneManager.LoadScene(lvlname[0].ToString() + ((lvlname[1] - '0' + 1)).ToString() + ('0').ToString() + lvlname[3].ToString() + lvlname[4].ToString() + ('1').ToString(), LoadSceneMode.Single);
-            lvlname[4] = lvlname[4] != '0' ? '0' : '0';
-            if (string.Compare(PlayerPrefs.GetString("LEVEL"), lvlname[0].ToString() + ((lvlname[1] - '0' + 1)).ToString() + ('0').ToString() + lvlname[3].ToString() + lvlname[4].ToString() + ('1').ToString()) <= 0)
-            {
-                PlayerPrefs.SetString("LEVEL", lvlname[0].ToString() + ((lvlname[1] - '0' + 1)).ToString() + ('0').ToString() + lvlname[3].ToString() + lvlname[4].ToString() + ('1').ToString());
-                Debug.Log("here1");
-            }
-            else
-                Debug.Log("BAD1");
-        }
-        else if (scenesInBuild.Contains(lvlname[0].ToString() + lvlname[1].ToString() + ((lvlname[2] - '0' + 1)).ToString() + lvlname[3].ToString() + lvlname[4].ToString() + ('1').ToString()))
-        {
-            SceneManager.LoadScene(lvlname[0].ToString() + lvlname[1].ToString() + ((lvlname[2] - '0' + 1)).ToString() + lvlname[3].ToString() + lvlname[4].ToString() + ('1').ToString(), LoadSceneMode.Single);
-            lvlname[4]=lvlname[4] != '0' ? '0' : '0';
-            if (string.Compare(PlayerPrefs.GetString("LEVEL"), lvlname[0].ToString() + lvlname[1].ToString() + ((lvlname[2] - '0' + 1)).ToString() + lvlname[3].ToString() + lvlname[4].ToString() + ('1').ToString()) <= 0)
-            {
-                PlayerPrefs.SetString("LEVEL", lvlname[0].ToString() + lvlname[1].ToString() + ((lvlname[2] - '0' + 1)).ToString() + lvlname[3].ToString() + lvlname[4].ToString() + ('1').ToString());
-                Debug.Log("Here2");
-
-            }
-            else
-                Debug.Log("Bad2");
+            Debug.Log("YES");
+            SceneManager.LoadScene(_nextlevel, LoadSceneMode.Single);
         }
         else
+        {
+            Debug.Log("error");
             SceneManager.LoadScene("Main", LoadSceneMode.Single);
+        }
+        /* int a = lvlname[2] - '0' + 1;
+     //    if (string.Compare(lvlname[2].ToString(),"9")==0 && scenesInBuild.Contains(lvlname[0].ToString() + ((lvlname[2] - '0' + 1)).ToString() + lvlname[3].ToString() + lvlname[4].ToString() + ('1').ToString()))
+     //    {
+     //        SceneManager.LoadScene(lvlname[0].ToString() + ((lvlname[1] - '0' + 1)).ToString() + ('0').ToString() + lvlname[3].ToString() + lvlname[4].ToString() + ('1').ToString(), LoadSceneMode.Single);
+     //
+     //        lvlname[4] = lvlname[4] != '0' ? '0' : '0';
+     //        if (string.Compare(PlayerPrefs.GetString("LEVEL"), lvlname[0].ToString() + ((lvlname[1] - '0' + 1)).ToString() + ('0').ToString() + lvlname[3].ToString() + lvlname[4].ToString() + ('1').ToString()) <= 0)
+     //        {
+     //            PlayerPrefs.SetString("LEVEL", lvlname[0].ToString() + ((lvlname[1] - '0' + 1)).ToString() + ('0').ToString() + lvlname[3].ToString() + lvlname[4].ToString() + ('1').ToString());
+     //           Debug.Log("here1");
+     //        }
+     //        else
+     //            Debug.Log("BAD1");
+     //   }
+         if (a > 9)
+         {
+                 //lvlname[4] = (char)(a / 10);
+                 //lvlname[5] = (char)(a % 10);
+                 SceneManager.LoadScene(lvlname[0].ToString()+a.ToString()+lvlname[3].ToString()+('0').ToString()+('1').ToString(), LoadSceneMode.Single);
+             PlayerPrefs.SetString("LEVEL","l0-01");
+         }
+
+         else if (scenesInBuild.Contains(lvlname[0].ToString() + lvlname[1].ToString() + ((lvlname[2] - '0' + 1)).ToString() + lvlname[3].ToString() + lvlname[4].ToString() + ('1').ToString()))
+         {
+             SceneManager.LoadScene(lvlname[0].ToString() + lvlname[1].ToString() + ((lvlname[2] - '0' + 1)).ToString() + lvlname[3].ToString() + lvlname[4].ToString() + ('1').ToString(), LoadSceneMode.Single);
+
+             lvlname[4]=lvlname[4] != '0' ? '0' : '0';
+             if (string.Compare(PlayerPrefs.GetString("LEVEL"), lvlname[0].ToString() + lvlname[1].ToString() + ((lvlname[2] - '0' + 1)).ToString() + lvlname[3].ToString() + lvlname[4].ToString() + ('1').ToString()) <= 0)
+             {
+                 PlayerPrefs.SetString("LEVEL", lvlname[0].ToString() + lvlname[1].ToString() + ((lvlname[2] - '0' + 1)).ToString() + lvlname[3].ToString() + lvlname[4].ToString() + ('1').ToString());
+                 Debug.Log("Here2");
+
+             }
+             else
+                 Debug.Log("Bad2");
+         }
+         else
+             SceneManager.LoadScene("Main", LoadSceneMode.Single);*/
     }
     public void AutoRestart()
     {
