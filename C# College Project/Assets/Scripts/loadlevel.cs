@@ -42,7 +42,7 @@ public class loadlevel : MonoBehaviour {
             _nextstage = ('l').ToString() + lvlname[1].ToString() + lvlname[2].ToString() + lvlname[3].ToString() + (int.Parse((lvlname[4] - '0').ToString() + (lvlname[5] - '0').ToString()) + 1).ToString();
         else
             _nextstage = ('l').ToString() + lvlname[1].ToString() + lvlname[2].ToString() + lvlname[3].ToString() + ('0').ToString() + (int.Parse((lvlname[4] - '0').ToString() + (lvlname[5] - '0').ToString()) + 1).ToString();
-        Debug.Log(_nextstage+" "+_nextlevel);
+        //Debug.Log(_nextstage+" "+_nextlevel);
     }
     public void loadlvl(string lvlName)
     {
@@ -84,7 +84,7 @@ public class loadlevel : MonoBehaviour {
         }
         else
         {
-            Debug.Log("yes2");
+            //Debug.Log("yes2");
             nextLevelMenu.gameObject.SetActive(true);
         }
 
