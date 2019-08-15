@@ -79,7 +79,7 @@ public class loadlevel : MonoBehaviour {
 
         if (scenesInBuild.Contains(_nextstage))
         {
-            Debug.Log("yes1");
+            //Debug.Log("yes1");
             SceneManager.LoadScene(_nextstage, LoadSceneMode.Single);
         }
         else
@@ -134,12 +134,12 @@ public class loadlevel : MonoBehaviour {
     {
         if (scenesInBuild.Contains(_nextlevel))
         {
-            Debug.Log("YES");
+            //Debug.Log("YES");
             SceneManager.LoadScene(_nextlevel, LoadSceneMode.Single);
         }
         else
         {
-            Debug.Log("error");
+            //Debug.Log("error");
             SceneManager.LoadScene("Main", LoadSceneMode.Single);
         }
         /* int a = lvlname[2] - '0' + 1;

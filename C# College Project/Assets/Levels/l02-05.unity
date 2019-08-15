@@ -190,26 +190,6 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114996525408164984, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
-        type: 3}
-      propertyPath: nxtstage
-      value: l2-3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5859492350745310749, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5962131297854335148, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
-        type: 3}
-      propertyPath: m_CullTransparentMesh
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3597659107791237173, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: l2-1
-      objectReference: {fileID: 0}
     - target: {fileID: 657483209319193213, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
         type: 3}
       propertyPath: m_inputSource
@@ -260,15 +240,20 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5056804484523630986, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
+    - target: {fileID: 114996525408164984, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
         type: 3}
-      propertyPath: m_RaycastTarget
-      value: 0
+      propertyPath: nxtstage
+      value: l2-3
       objectReference: {fileID: 0}
-    - target: {fileID: 1253337824220232156, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
+    - target: {fileID: 5859492350745310749, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
         type: 3}
-      propertyPath: m_RaycastTarget
-      value: 0
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597659107791237173, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: l2-1
       objectReference: {fileID: 0}
     - target: {fileID: 7754067320903312956, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
         type: 3}
@@ -289,6 +274,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: l2-3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5962131297854335148, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
+        type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5056804484523630986, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
+        type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1253337824220232156, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
+        type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224044102290254704, guid: 16d01380c06ea1b4bbd1457fbf6fc6cd,
         type: 3}
@@ -766,6 +766,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3550215758865763619, guid: 0ed95af5dd282a9488a3ec0f6e80e029,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.04883904
+      objectReference: {fileID: 0}
     - target: {fileID: 3550215758865763618, guid: 0ed95af5dd282a9488a3ec0f6e80e029,
         type: 3}
       propertyPath: panel
@@ -916,6 +921,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550215758865763619, guid: 0ed95af5dd282a9488a3ec0f6e80e029,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.04883904
       objectReference: {fileID: 0}
     - target: {fileID: 3550215758865763618, guid: 0ed95af5dd282a9488a3ec0f6e80e029,
         type: 3}
