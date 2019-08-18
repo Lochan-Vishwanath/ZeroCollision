@@ -92,6 +92,7 @@ GameObject:
   - component: {fileID: 3852889203008232509}
   - component: {fileID: 3852889203008232508}
   - component: {fileID: 3852889203008232480}
+  - component: {fileID: 8312130965380561679}
   m_Layer: 0
   m_Name: espike transperent
   m_TagString: Spike
@@ -206,7 +207,21 @@ MonoBehaviour:
   speed: 0.06
   ParticleEffectOBJ: {fileID: 4769258715521532665, guid: cd30e62537734df4e8743485d8846fce,
     type: 3}
-  RedDot: {fileID: 1279991800594688697, guid: dc4a59951d7006344b393f58c2ccf8c0, type: 3}
+--- !u!114 &8312130965380561679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3852889203008232511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d3b2476213911a4a8eeb62b30431658, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destination1: {fileID: 3852889202971885939}
+  destination2: {fileID: 3852889203488740044}
+  RedDot: {fileID: 1279991800594688703, guid: dc4a59951d7006344b393f58c2ccf8c0, type: 3}
 --- !u!1 &3852889203488740047
 GameObject:
   m_ObjectHideFlags: 0

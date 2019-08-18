@@ -12,9 +12,9 @@ public class SpikeMovement : MonoBehaviour
     public GameObject ParticleEffectOBJ;
     ScreenShake ss;
     SpriteRenderer other;
-    public GameObject RedDot;
-    float btw_distance;
-    private float noOfPts;
+    //public GameObject RedDot;
+    //float btw_distance;
+    //private float noOfPts;
 
     void Start()
     {
@@ -28,13 +28,13 @@ public class SpikeMovement : MonoBehaviour
         destination = destination1;
         other = GetComponent<SpriteRenderer>();
 
-        btw_distance=Vector3.Distance(destination1.position,destination2.position);
-        noOfPts = Mathf.Ceil(btw_distance / 0.4f);
+        //btw_distance=Vector3.Distance(destination1.position,destination2.position);
+        //noOfPts = Mathf.Ceil(btw_distance / 0.4f);
         //Debug.Log(noOfPts);
-        Vector3 dist = new Vector3(0,-0.4f,0);
-        for (int i = 0; i <= noOfPts; i++) {
-            Instantiate(RedDot,destination1.position+i*dist,Quaternion.identity);
-        }
+        //Vector3 dist = new Vector3(0,-0.4f,0);
+        //for (int i = 0; i <= noOfPts; i++) {
+        //    Instantiate(RedDot,destination1.position+i*dist,Quaternion.identity);
+        //}
     }
     void Update()
     {

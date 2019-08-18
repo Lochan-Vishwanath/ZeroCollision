@@ -100,7 +100,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 5e890a6a2cfd7f748b97e3454b7c74bc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -179,7 +179,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 5e890a6a2cfd7f748b97e3454b7c74bc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -204,6 +204,7 @@ GameObject:
   - component: {fileID: 340329972171546022}
   - component: {fileID: 495324634445413032}
   - component: {fileID: 265854789202486316}
+  - component: {fileID: 3111641443152084385}
   m_Layer: 0
   m_Name: espike transperent
   m_TagString: Spike
@@ -290,7 +291,6 @@ MonoBehaviour:
   speed: 0.06
   ParticleEffectOBJ: {fileID: 4769258715521532665, guid: cd30e62537734df4e8743485d8846fce,
     type: 3}
-  RedDot: {fileID: 1279991800594688703, guid: dc4a59951d7006344b393f58c2ccf8c0, type: 3}
 --- !u!114 &495324634445413032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -319,3 +319,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.99
+--- !u!114 &3111641443152084385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340329972171546020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d3b2476213911a4a8eeb62b30431658, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destination1: {fileID: 340329971760915272}
+  destination2: {fileID: 340329970443901493}
+  RedDot: {fileID: 1279991800594688703, guid: dc4a59951d7006344b393f58c2ccf8c0, type: 3}
+  ceilValue: 0
