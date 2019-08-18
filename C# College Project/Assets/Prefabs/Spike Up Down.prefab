@@ -290,6 +290,7 @@ MonoBehaviour:
   speed: 0.06
   ParticleEffectOBJ: {fileID: 4769258715521532665, guid: cd30e62537734df4e8743485d8846fce,
     type: 3}
+  RedDot: {fileID: 1279991800594688703, guid: dc4a59951d7006344b393f58c2ccf8c0, type: 3}
 --- !u!114 &495324634445413032
 MonoBehaviour:
   m_ObjectHideFlags: 0

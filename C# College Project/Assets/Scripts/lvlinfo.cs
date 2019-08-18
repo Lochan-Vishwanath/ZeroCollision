@@ -27,15 +27,15 @@ public class lvlinfo : MonoBehaviour
         //Debug.Log(scenesInBuild[j]);
         if (scenesInBuild.Contains(SceneName[0].ToString() + SceneName[1].ToString() + SceneName[2].ToString() +SceneName[3].ToString()+ 10.ToString()))
             //Debug.Log("here1");
-        mytxt.text = "Stage " + SceneName[4] + SceneName[5] + "/" + 10;
+        mytxt.text = "Stage " + SceneName[4] + SceneName[5] + "/10";
         else if (scenesInBuild.Contains(SceneName[0].ToString() + SceneName[1].ToString() + SceneName[2].ToString()+SceneName[3].ToString()+0.ToString() + 7.ToString()))
             //Debug.Log("here2");
-        mytxt.text = "Stage " + SceneName[4] + SceneName[5] + "/" + 0.ToString() + 7.ToString();
+        mytxt.text = "Stage " + SceneName[4] + SceneName[5] + "/07";
         else if (scenesInBuild.Contains(SceneName[0].ToString() + SceneName[1].ToString() + SceneName[2].ToString() + SceneName[3].ToString() + 0.ToString() + 5.ToString()))
             //Debug.Log("here3");
-        mytxt.text = "Stage " + SceneName[4] + SceneName[5] + "/" + 0.ToString() + 5.ToString();
+        mytxt.text = "Stage " + SceneName[4] + SceneName[5] + "/05";
         else
-            Debug.Log("false");
+            //Debug.Log("false");
         StartCoroutine(Pause(3));
     }
     private IEnumerator Pause(int p)

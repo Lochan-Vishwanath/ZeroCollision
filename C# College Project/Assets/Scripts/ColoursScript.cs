@@ -96,7 +96,7 @@ public class ColoursScript : MonoBehaviour {
     IEnumerator waitGameOver()
     {
         //Debug.Log("here");
-        yield return new WaitForSeconds(0.7f);
+        yield return new WaitForSeconds(1.5f);
         panel.gameObject.SetActive(true);
     }
 }

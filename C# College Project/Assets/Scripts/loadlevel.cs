@@ -67,7 +67,10 @@ public class loadlevel : MonoBehaviour {
         newlvlname[3] = '1';
         //Debug.Log(newlvlname.ToString());
         SceneManager.LoadScene(new string(newlvlname), LoadSceneMode.Single);*/
+        Restart.ADCLICKCOUNT = int.Parse(lvlname[1].ToString() + lvlname[2].ToString()) / 5 + 2;
+        //Debug.Log(Restart.ADCLICKCOUNT);
         SceneManager.LoadScene(lvlname[0].ToString() + lvlname[1].ToString() + lvlname[2].ToString() + lvlname[3].ToString() + lvlname[4].ToString() + ('1').ToString(), LoadSceneMode.Single);
+
     }
 
     

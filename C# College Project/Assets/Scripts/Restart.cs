@@ -15,6 +15,7 @@ public class Restart : MonoBehaviour {
 
     private void Start()
     {
+        //Debug.Log("Starting");
         if (string.IsNullOrEmpty(oldname)) {
             oldname = "l01-01";
             oldlvlname = "l01-01".ToCharArray();
@@ -55,16 +56,17 @@ public class Restart : MonoBehaviour {
         
         else
         {
-            //Debug.Log("HERE3");
+            //Debug.Log("HERE3.3");
             ADCLICKCOUNT--;
         }
         if (ADCLICKCOUNT < 1) _Restart.gameObject.SetActive(false);
+       // Debug.Log(ADCLICKCOUNT);
     }
 
 
     public void restartlvl()
     {
-        StageLoad.stageloading=false;   
+        StageLoad.stageloading=false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
