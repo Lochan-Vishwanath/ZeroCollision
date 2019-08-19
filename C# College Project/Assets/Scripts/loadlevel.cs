@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class loadlevel : MonoBehaviour {
 
@@ -12,6 +13,8 @@ public class loadlevel : MonoBehaviour {
     char[] lvlname = "l0-0".ToCharArray();
     string _nextlevel, _nextstage;
     List<string> scenesInBuild = new List<string>();
+    public TextMeshProUGUI Moves, timetake;
+    bool timeset=false;
     private void Start()
     {
         thisScene = SceneManager.GetActiveScene();
@@ -89,6 +92,19 @@ public class loadlevel : MonoBehaviour {
         {
             //Debug.Log("yes2");
             nextLevelMenu.gameObject.SetActive(true);
+            if (!timeset) {
+                playerStats.timeTaken += Time.time - playerStats.timer;
+                //Debug.Log(playerStats.timeTaken);
+                timeset = true;
+            }
+            
+            Moves.text = DragwithMouse.Moves.ToString();
+            if ((int)playerStats.timeTaken / 60 > 0)
+                timetake.text = ((int)playerStats.timeTaken / 60).ToString() + " m " + ((int)playerStats.timeTaken % 60).ToString() + " s";
+            else
+                timetake.text = ((int)playerStats.timeTaken).ToString() + " s";
+            //DragwithMouse.Moves = 0;
+            //playerStats.timeTaken = 0;
         }
 
         /* if (lvlname[5] == '3' && !scenesInBuild.Contains(lvlname[0].ToString() + lvlname[1].ToString() + lvlname[2].ToString() + lvlname[3].ToString() + lvlname[4].ToString() + ((lvlname[5] - '0' + 1)).ToString()))

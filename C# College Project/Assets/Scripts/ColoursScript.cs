@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using TMPro;
 
 
 public class ColoursScript : MonoBehaviour {
@@ -16,7 +17,7 @@ public class ColoursScript : MonoBehaviour {
     //bool once = true;
     public bool shownextlvl=false;
     loadlevel x;
-
+    //public TextMeshProUGUI moves, timetaken;
     public string nxtstage;
     public Color32 setColor(int Set_Option)
     {
@@ -98,5 +99,11 @@ public class ColoursScript : MonoBehaviour {
         //Debug.Log("here");
         yield return new WaitForSeconds(1.5f);
         panel.gameObject.SetActive(true);
+        if (Restart.ADCLICKCOUNT == 0)
+        {
+            DragwithMouse.Moves = 0;
+            playerStats.timeTaken = 0;
+            playerStats.timer = 0;
+        }
     }
 }

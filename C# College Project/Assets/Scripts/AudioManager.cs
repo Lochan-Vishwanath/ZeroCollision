@@ -5,7 +5,7 @@ public class AudioManager : MonoBehaviour
 {
     public static bool playaudiogood = false,playaudiogameover=false;
     AudioSource mainau;
-    public AudioClip good, gameover,next;
+    public AudioClip good, gameover;
     
     void Start()
     {

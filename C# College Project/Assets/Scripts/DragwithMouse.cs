@@ -6,6 +6,7 @@ public class DragwithMouse : MonoBehaviour {
     public bool draging = false;
     RectTransform panel;
     public static bool cutoff=false;
+    public static int Moves;
     Vector3 originalscale;
     //public static bool takemouseinput=true;
     void Start(){
@@ -21,12 +22,14 @@ public class DragwithMouse : MonoBehaviour {
     private void OnMouseDown()
     {
         clicked = false;
+        Moves++;
     }
     private void OnMouseUp()
     {
         cutoff=false;
         clicked = true;
         draging = false;
+        
     }
     private void OnMouseDrag()
     {

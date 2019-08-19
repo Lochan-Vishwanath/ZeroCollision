@@ -15,7 +15,7 @@ public class lvlinfo : MonoBehaviour
         char[] SceneName = thisscene.name.ToCharArray();
         //mytxt.text = "Level " + SceneName[1] + " Stage " + SceneName[3];
         //mytxt.text = "Level " + SceneName[1]+SceneName[2] + " Stage " + SceneName[4]+SceneName[5];
-        
+
         List<string> scenesInBuild = new List<string>();
         for (int i = 1; i < SceneManager.sceneCountInBuildSettings; i++)
         {
