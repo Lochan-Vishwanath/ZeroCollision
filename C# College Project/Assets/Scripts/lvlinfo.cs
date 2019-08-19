@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class lvlinfo : MonoBehaviour
 {
     public TextMeshProUGUI mytxt;
-    bool done = false;
+    //bool done = false;
     Scene thisscene;
     private void Start()
     {
@@ -35,8 +35,8 @@ public class lvlinfo : MonoBehaviour
             //Debug.Log("here3");
         mytxt.text = "Stage " + SceneName[4] + SceneName[5] + "/05";
         else
-            //Debug.Log("false");
-        StartCoroutine(Pause(3));
+            Debug.Log("false");
+        StartCoroutine(Pause(2));
     }
     private IEnumerator Pause(int p)
     {
@@ -46,11 +46,12 @@ public class lvlinfo : MonoBehaviour
         {
             yield return 0;
         }
-        done = true;
+    //    done = true;
+        mytxt.color = Color.clear;
     }
-    private void LateUpdate()
-    {
-        if (done)
-            mytxt.color = Color.clear;
-    }
+    //private void LateUpdate()
+    //{
+    //    if (done)
+    //        mytxt.color = Color.clear;
+    //}
 }
