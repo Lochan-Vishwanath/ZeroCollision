@@ -202,11 +202,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 1.9400002
       objectReference: {fileID: 0}
-    - target: {fileID: 3852889203008232480, guid: d5a13b018f36ebe4a912168e79009a34,
-        type: 3}
-      propertyPath: speed
-      value: 0.0042
-      objectReference: {fileID: 0}
     - target: {fileID: 3852889202971885939, guid: d5a13b018f36ebe4a912168e79009a34,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -216,6 +211,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3852889203008232480, guid: d5a13b018f36ebe4a912168e79009a34,
+        type: 3}
+      propertyPath: speed
+      value: 0.0055
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5a13b018f36ebe4a912168e79009a34, type: 3}
@@ -608,7 +608,7 @@ PrefabInstance:
     - target: {fileID: 114431529752779812, guid: 78feac9053ddfea438b19bfab2d780bb,
         type: 3}
       propertyPath: speed
-      value: 0.565
+      value: 0.56
       objectReference: {fileID: 0}
     - target: {fileID: 4004991884624360, guid: 78feac9053ddfea438b19bfab2d780bb, type: 3}
       propertyPath: m_LocalScale.x
@@ -705,7 +705,7 @@ PrefabInstance:
     - target: {fileID: 7149255365540087312, guid: d51423a027dfb644eb5712443d5b0bd0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.8
+      value: 3.37
       objectReference: {fileID: 0}
     - target: {fileID: 7149255364921638566, guid: d51423a027dfb644eb5712443d5b0bd0,
         type: 3}
@@ -1051,7 +1051,7 @@ PrefabInstance:
     - target: {fileID: 114431529752779812, guid: 78feac9053ddfea438b19bfab2d780bb,
         type: 3}
       propertyPath: speed
-      value: 0.565
+      value: 0.56
       objectReference: {fileID: 0}
     - target: {fileID: 4004991884624360, guid: 78feac9053ddfea438b19bfab2d780bb, type: 3}
       propertyPath: m_LocalScale.x
@@ -1134,7 +1134,7 @@ PrefabInstance:
     - target: {fileID: 114431529752779812, guid: 78feac9053ddfea438b19bfab2d780bb,
         type: 3}
       propertyPath: speed
-      value: 0.565
+      value: 0.52
       objectReference: {fileID: 0}
     - target: {fileID: 4004991884624360, guid: 78feac9053ddfea438b19bfab2d780bb, type: 3}
       propertyPath: m_LocalScale.x

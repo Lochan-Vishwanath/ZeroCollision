@@ -162,7 +162,9 @@ PlayerSettings:
   applicationIdentifier:
     Android: com.Lochan.CollegeProject
     Standalone: com.Company.ProductName
-  buildNumber: {}
+    iPhone: com.Lochan.CollegeProject
+  buildNumber:
+    iPhone: 1
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 16
   AndroidTargetSdkVersion: 0
@@ -693,6 +695,7 @@ PlayerSettings:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled:
+    Collab: 1
     UNet: 1
   luminIcon:
     m_Name: 
@@ -713,10 +716,10 @@ PlayerSettings:
   facebookXfbml: 0
   facebookFrictionlessRequests: 1
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: b9852779-701d-4af8-8cd8-90e7abd0cd98
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: Color Splat! (1)
+  organizationId: lochan_vishwanath
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
