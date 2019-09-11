@@ -62,7 +62,10 @@ public class RandomMovement : MonoBehaviour {
 
         destination = Instantiate(prefab, RandPosition , Quaternion.identity).GetComponent<Transform>();
     }
+    private void OnCollisionStay2D(Collision2D collision)
+    {
 
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.transform.tag == "GOD") {
