@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 using TMPro;
-
+using System.Collections.Generic;
 
 public class ColoursScript : MonoBehaviour {
 
@@ -53,6 +53,8 @@ public class ColoursScript : MonoBehaviour {
             StartCoroutine(waitGameOver());
         if (no_of_objs <= 0)
         {
+            string eventName = "af_fakeImpression";
+            Dictionary<string, string> eventParams = new Dictionary<string, string>() { { "imp", "1" } }; AppsFlyer.trackRichEvent(eventName, eventParams);
             StartCoroutine(waitNextStage());
            
             /*if(shownextlvl && !GameOverPanel.gameObject.activeInHierarchy)
@@ -97,6 +99,8 @@ public class ColoursScript : MonoBehaviour {
     IEnumerator waitGameOver()
     {
         //Debug.Log("here");
+        string eventName = "af_fakeImpression";
+        Dictionary<string, string> eventParams = new Dictionary<string, string>() { { "imp", "1" } }; AppsFlyer.trackRichEvent(eventName, eventParams);
         yield return new WaitForSeconds(1.5f);
         panel.gameObject.SetActive(true);
         if (Restart.ADCLICKCOUNT == 0)

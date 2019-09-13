@@ -166,7 +166,7 @@ PlayerSettings:
   applicationIdentifier:
     Android: com.Lochan.CollegeProject
     Standalone: com.Company.ProductName
-    iPhone: com.Lochan.CollegeProject
+    iPhone: com.Lochan.ColorSplat
   buildNumber:
     iPhone: 1
   AndroidBundleVersionCode: 1
