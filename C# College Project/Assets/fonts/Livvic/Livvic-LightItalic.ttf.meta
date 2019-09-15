@@ -1,0 +1,35 @@
+fileFormatVersion: 2
+guid: ce108b472119a43eeb6f788d45ea12d2
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Livvic
+  fontNames:
+  - Livvic
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 0ae99f312be0e4680bb9af3723fc7c91, type: 3}
+  - {fileID: 12800000, guid: b92277723d90a4eddb41551a96743f82, type: 3}
+  - {fileID: 12800000, guid: 9039e1d2c520545af92646170bfefd33, type: 3}
+  - {fileID: 12800000, guid: 5186a244403c2448eae7498e302370ab, type: 3}
+  - {fileID: 12800000, guid: 4664466543f8b44f5afc67435dd9ab9c, type: 3}
+  - {fileID: 12800000, guid: 5e2baa653502441d8b041c62d09c3f94, type: 3}
+  - {fileID: 12800000, guid: 506ae5d69eae4420bb5e88052e04dbae, type: 3}
+  - {fileID: 12800000, guid: 890777e64bba84fa382d3ec5a6364341, type: 3}
+  - {fileID: 12800000, guid: 522142284fd2d4ebc9854aef56288ae5, type: 3}
+  - {fileID: 12800000, guid: 313fe699675b5427eb568ad132bc7415, type: 3}
+  - {fileID: 12800000, guid: 7ce4228b8e0c945faaaeb75960953c21, type: 3}
+  - {fileID: 12800000, guid: 61038abce9ac8401e9238978f27226d4, type: 3}
+  - {fileID: 12800000, guid: 9a5c69af08889421fadbe11a631bb694, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

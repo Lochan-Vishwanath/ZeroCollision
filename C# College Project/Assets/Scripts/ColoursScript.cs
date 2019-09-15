@@ -92,7 +92,7 @@ public class ColoursScript : MonoBehaviour {
 
     IEnumerator waitNextStage()
     {
-        yield return new WaitForSeconds(0.15f);
+        yield return new WaitForSeconds(0.25f);
         //yield return null;
         x.nextStage();
     }

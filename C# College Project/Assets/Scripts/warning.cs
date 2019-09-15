@@ -31,7 +31,7 @@ public class warning : MonoBehaviour {
             parent.position = Vector2.MoveTowards(parent.position, target.position, 10 * Time.deltaTime);
         }
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    /*private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.transform.tag == "EnemyB" || collision.transform.tag == "Spike")
         {
@@ -80,9 +80,37 @@ public class warning : MonoBehaviour {
             {
                 Debug.Log("samecolor");
             }
-            */
+            
         }
-    }
+    }*/
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.transform.tag == "EnemyB" || collision.transform.tag == "Spike")
+        {
+            InvokeRepeating("trigger", 0.2f, 0.2f);
+            //InvokeRepeating("triggerframe", 0.1f, 0.5f);
+            if (!dwm.draging && !beeping.isPlaying)
+                beeping.Play();
+        }
+        if (collision.transform.tag == "EnemyA")
+        {
+            int colno = collision.GetComponentInParent<randomColor>().Set_Option;
+            if (!(no == colno))
+            {
+                //Debug.Log("not same color");
+                InvokeRepeating("trigger", 0.2f, 0.2f);
+                if (!dwm.draging && !beeping.isPlaying)
+                    beeping.Play();
+                
+                //InvokeRepeating("triggerframe", 0.1f, 0.5f);
+            }
+            else
+            {
+                target = collision.gameObject.transform;
+                movetowards = true;
+            }
+        }
+        }
     private void OnTriggerExit2D(Collider2D collision)
     {
         CancelInvoke();

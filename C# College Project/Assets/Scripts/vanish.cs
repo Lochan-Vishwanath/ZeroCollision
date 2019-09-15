@@ -7,7 +7,7 @@ public class vanish : MonoBehaviour
     public RectTransform[] A;
     IEnumerator autoTimer()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(5);
         foreach(RectTransform x in A)
         {
             x.gameObject.SetActive(false);
