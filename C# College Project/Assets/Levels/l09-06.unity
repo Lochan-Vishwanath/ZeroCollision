@@ -94,8 +94,8 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaDirect: 0.5
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
-    m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
+    m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -431,7 +431,7 @@ PrefabInstance:
     - target: {fileID: 340329972171546022, guid: 5d0cd487012c42d41b8bc4dbf2f8a98d,
         type: 3}
       propertyPath: speed
-      value: 0.064
+      value: 0.054
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d0cd487012c42d41b8bc4dbf2f8a98d, type: 3}
@@ -510,7 +510,7 @@ PrefabInstance:
     - target: {fileID: 340329972171546022, guid: 5d0cd487012c42d41b8bc4dbf2f8a98d,
         type: 3}
       propertyPath: speed
-      value: 0.064
+      value: 0.054
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d0cd487012c42d41b8bc4dbf2f8a98d, type: 3}
@@ -591,11 +591,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.9
       objectReference: {fileID: 0}
-    - target: {fileID: 7149255365540087313, guid: d51423a027dfb644eb5712443d5b0bd0,
-        type: 3}
-      propertyPath: n
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7149255365540087312, guid: d51423a027dfb644eb5712443d5b0bd0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -619,6 +614,11 @@ PrefabInstance:
     - target: {fileID: 7149255364921638564, guid: d51423a027dfb644eb5712443d5b0bd0,
         type: 3}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7149255365540087313, guid: d51423a027dfb644eb5712443d5b0bd0,
+        type: 3}
+      propertyPath: n
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -698,7 +698,7 @@ PrefabInstance:
     - target: {fileID: 340329972171546022, guid: 5d0cd487012c42d41b8bc4dbf2f8a98d,
         type: 3}
       propertyPath: speed
-      value: 0.064
+      value: 0.054
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d0cd487012c42d41b8bc4dbf2f8a98d, type: 3}
@@ -995,7 +995,7 @@ PrefabInstance:
     - target: {fileID: 340329972171546022, guid: 5d0cd487012c42d41b8bc4dbf2f8a98d,
         type: 3}
       propertyPath: speed
-      value: 0.064
+      value: 0.054
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d0cd487012c42d41b8bc4dbf2f8a98d, type: 3}
