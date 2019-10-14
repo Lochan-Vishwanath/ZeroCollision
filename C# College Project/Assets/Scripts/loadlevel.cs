@@ -151,6 +151,10 @@ public class loadlevel : MonoBehaviour {
     }
     public void nextLevel()
     {
+        string eventName = "af_fakeImpression";
+        Dictionary<string, string> eventParams = new Dictionary<string, string>() { { "imp", "1" } };
+        AppsFlyer.trackRichEvent(eventName, eventParams);
+        Debug.Log("MAGIC");
         if (scenesInBuild.Contains(_nextlevel))
         {
             //Debug.Log("YES");
